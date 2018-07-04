@@ -2,50 +2,56 @@
 
 var previousPhotos = ["purple", "black", "blue", "red"],
     photo = 0,
-    organizers = ["purple", "black", "blue", "red"];
+    organizers = ["purple", "black", "blue", "red"],
     organizer = 0;
 
-function next(type) {
-
-    if(type){
-        nextPhoto(document.getElementById("gallery"));
+function nextOrganizer() {
+    if(organizer < organizers.length-1){
+        organizer += 1;
+        document.getElementById("organization").style.backgroundColor = organizers[organizer];
     }
-    else{
-        nextPhoto(document.getElementById("organization"));
-    }
+    else {
+        organizer = 0;
+        document.getElementById("organization").style.backgroundColor = organizers[organizer];
 
-}
-
-function previous(type) {
-
-    if(type){
-        previousPhoto(document.getElementById("gallery"));
-    }
-    else{
-        previousPhoto(document.getElementById("organization"));
     }
 
 }
 
-function nextPhoto(elem){
+function previousOrganizer() {
+
+    if(organizer > 0){
+        organizer -= 1;
+        document.getElementById("organization").style.backgroundColor = organizers[organizer];
+    }
+    else {
+        organizer = organizers.length -1;
+        document.getElementById("organization").style.backgroundColor = organizers[organizer];
+
+    } 
+
+
+}
+
+function nextPhoto(){
     if(photo < previousPhotos.length-1){
         photo += 1;
-        elem.style.backgroundColor = previousPhotos[photo];
+        document.getElementById("gallery").style.backgroundColor = previousPhotos[photo];
     }
     else {
         photo = 0;
-        elem.style.backgroundColor = previousPhotos[photo];
+        document.getElementById("gallery").style.backgroundColor = previousPhotos[photo];
 
     }
 }
-function previousPhoto(elem){
+function previousPhoto(){
     if(photo > 0){
         photo -= 1;
-        elem.style.backgroundColor = previousPhotos[photo];
+        document.getElementById("gallery").style.backgroundColor = previousPhotos[photo];
     }
     else {
         photo = previousPhotos.length -1;
-        elem.style.backgroundColor = previousPhotos[photo];
+        document.getElementById("gallery").style.backgroundColor = previousPhotos[photo];
 
     } 
 }
