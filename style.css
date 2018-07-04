@@ -19,6 +19,8 @@ body {
 .introduction {
   padding-left: 10px;
   padding-right: 10px; }
+  .introduction__title h2 {
+    text-align: center; }
 
 .call {
   background-color: #270327;
