@@ -17,6 +17,9 @@ body {
       text-align: center; }
 
 .introduction {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   padding-left: 10px;
   padding-right: 10px; }
   .introduction__title {

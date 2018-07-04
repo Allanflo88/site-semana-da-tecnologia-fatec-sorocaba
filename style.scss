@@ -23,12 +23,14 @@ body {
   }
 }
 .introduction {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   padding-left: 10px;
   padding-right: 10px;
 
   &__title {
     text-align: center;
-
   }
 
   &__text {
