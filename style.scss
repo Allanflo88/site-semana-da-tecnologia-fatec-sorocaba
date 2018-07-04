@@ -70,6 +70,8 @@ body {
 
   &__text {
     margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     &__name {
       text-align: center;
@@ -130,7 +132,6 @@ body {
   }
 
   &__content {
-
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -203,6 +204,6 @@ body {
   }
 
   &__email {
-      position: relative;
+    position: relative;
   }
 }

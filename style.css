@@ -47,7 +47,9 @@ body {
     margin-top: 30px;
     width: 50%; }
   .speakers__text {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px; }
     .speakers__text__name {
       text-align: center; }
 
