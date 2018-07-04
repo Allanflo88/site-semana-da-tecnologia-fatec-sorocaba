@@ -37,7 +37,9 @@ body {
     width: 10em;
     height: 2em;
     background-color: white;
-    color: #270327; }
+    color: #270327;
+    font-weight: bold;
+    text-transform: uppercase; }
 
 .speakers {
   width: 100%;
