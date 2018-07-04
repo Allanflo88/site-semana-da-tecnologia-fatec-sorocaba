@@ -19,7 +19,7 @@ body {
 .introduction {
   padding-left: 10px;
   padding-right: 10px; }
-  .introduction__title h2 {
+  .introduction__title {
     text-align: center; }
 
 .call {
