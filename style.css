@@ -32,6 +32,12 @@ body {
     color: white;
     text-transform: uppercase;
     text-align: center; }
+  .call__button {
+    border: 0;
+    width: 10em;
+    height: 2em;
+    background-color: white;
+    color: #270327; }
 
 .speakers {
   width: 100%;
