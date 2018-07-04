@@ -1,5 +1,9 @@
-$primary-color: purple;
-$secondary-color: rgb(39, 3, 39);
+$primary-color: #9c27b0;
+$secondary-color: #ab47bc;
+$primary-green: #b2ff59;
+$secondary-green: #ccff90;
+$primary-dark: rgb(39, 3, 39);
+$secondary-black: #424242;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 $desktop-large-width: 1025px;
@@ -76,7 +80,7 @@ body {
   }
 }
 .call {
-  background-color: $secondary-color;
+  background-color: $primary-dark;
   width: 100%;
   height: 50vh;
   display: flex;
