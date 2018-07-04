@@ -119,7 +119,6 @@ body {
 .footer {
   background-color: purple;
   width: 100%;
-  height: 20vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -129,10 +128,9 @@ body {
     flex-flow: row;
     justify-content: center;
     align-content: center;
-    position: relative;
-    height: 20vh; }
+    position: relative; }
     .footer__logo img {
-      height: 80%;
+      height: 50px;
       width: auto; }
   .footer__email {
     position: relative; }
