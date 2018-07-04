@@ -30,7 +30,8 @@ body {
   align-items: center; }
   .call__title {
     color: white;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
 
 .speakers {
   width: 100%;
