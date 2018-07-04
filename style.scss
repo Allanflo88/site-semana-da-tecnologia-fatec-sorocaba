@@ -1,5 +1,32 @@
 $primary-color: purple;
 $secondary-color: rgb(39, 3, 39);
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-large-width: 1025px;
+
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media (min-width: #{$desktop-large-width}) {
+    @content;
+  }
+}
 
 body {
   margin: 0;
@@ -17,6 +44,10 @@ body {
     color: white;
     text-transform: uppercase;
 
+    @include tablet {
+      font-size: x-large;
+    }
+
     h1 {
       text-align: center;
     }
@@ -29,8 +60,16 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 
+  @include tablet {
+    flex-flow: row;
+  }
+
   &__title {
     text-align: center;
+
+    @include tablet {
+      width: 30%;
+    }
   }
 
   &__text {

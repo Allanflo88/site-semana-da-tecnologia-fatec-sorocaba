@@ -13,6 +13,9 @@ body {
   .header__title {
     color: white;
     text-transform: uppercase; }
+    @media (min-width: 768px) {
+      .header__title {
+        font-size: x-large; } }
     .header__title h1 {
       text-align: center; }
 
@@ -22,8 +25,14 @@ body {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px; }
+  @media (min-width: 768px) {
+    .introduction {
+      flex-flow: row; } }
   .introduction__title {
     text-align: center; }
+    @media (min-width: 768px) {
+      .introduction__title {
+        width: 30%; } }
 
 .call {
   background-color: #270327;
