@@ -122,6 +122,7 @@ body {
     justify-content: center;
     align-content: center; }
     .footer__logo img {
-      width: 30vw; }
+      width: 30vw;
+      height: auto; }
 
 /*# sourceMappingURL=style.css.map */
