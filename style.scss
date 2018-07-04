@@ -1,0 +1,133 @@
+$primary-color: purple;
+$secondary-color: rgb(39, 3, 39);
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.header {
+    background-color: $primary-color;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        color: white;
+        text-transform: uppercase;
+        
+        h1 {
+            text-align: center;
+        }
+    }
+}
+.introduction {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__title {
+
+    }
+
+    &__text {
+
+
+    }
+
+}
+.call {
+
+    background-color: $secondary-color;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+
+        color: white;
+        text-transform: uppercase;
+
+    }
+
+    &__button {
+
+    }
+}
+.speakers {
+
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+
+        text-transform: uppercase;
+        text-align: center
+
+    }
+
+    &__avatar {
+
+        border-radius: 100%;
+        margin-top: 30px;
+        width: 50%;
+
+    }
+
+    &__text {
+        
+        margin-bottom: 30px;
+
+
+        &__name {
+
+            text-align: center;
+
+        }
+
+        &__talk {
+
+        }
+
+        &__biography {
+
+        }
+    }
+}
+.previous {
+
+    &__gallery {
+
+    }
+}
+.sponsors {
+    img {
+
+    }
+}
+.organization {
+
+    &__carroussel {
+
+    }
+}
+.footer {
+
+    background-color: $primary-color;
+    width: 100%;
+    height: 10vh;
+    
+    &__logo {
+
+    }
+
+    &__email {
+
+    }
+}
