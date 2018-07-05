@@ -82,12 +82,9 @@ body {
         justify-items: center; } }
     .speakers__speaker__avatar {
       border-radius: 100%;
-      margin-top: 30px;
-      width: 50%; }
-      @media (min-width: 768px) {
-        .speakers__speaker__avatar {
-          margin-top: 30px !important;
-          margin: auto; } }
+      margin-top: 30px !important;
+      width: 50%;
+      margin: auto; }
     .speakers__speaker__text {
       margin-bottom: 30px;
       padding-left: 10px;

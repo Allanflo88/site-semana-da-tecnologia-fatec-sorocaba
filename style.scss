@@ -135,13 +135,10 @@ body {
 
     &__avatar {
       border-radius: 100%;
-      margin-top: 30px;
+      margin-top: 30px !important;
       width: 50%;
+      margin: auto;
 
-      @include tablet {
-        margin-top: 30px !important;
-        margin: auto;
-      }
     }
 
     &__text {
