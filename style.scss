@@ -129,6 +129,14 @@ body {
       border-radius: 0;
       border: 1px solid $primary-color;
       color: $primary-color;
+      background-color: white;
+      font-weight: bold;
+
+      &:active {
+        background-color: $primary-color;
+        border: 0;
+        color: white;
+      }
     }
   }
 
