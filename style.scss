@@ -301,9 +301,11 @@ body {
     position: relative;
     font-weight: bold;
     color: white;
+    padding-top: 10px;
 
     @include tablet {
       padding-right: 20px;
+      padding-top: 0;
     }
   }
 }
