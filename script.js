@@ -3,7 +3,8 @@
 var previousPhotos = ["purple", "black", "blue", "red"],
     photo = 0,
     organizers = ["purple", "black", "blue", "red"],
-    organizer = 0;
+    organizer = 0,
+    tabAtual = "monday"
 
 function nextOrganizer() {
     if(organizer < organizers.length-1){
@@ -54,4 +55,18 @@ function previousPhoto(){
         document.getElementById("gallery").style.backgroundColor = previousPhotos[photo];
 
     } 
+}
+function changeTab(tab){
+    var week = ["monday", "tuesday", "wednesday", "thursday", "friday"];
+    var containers = document.getElementsByClassName("speakers__container speakers__container--not-show");
+    var containerAtual = document.getElementsByClassName("speakers__container");
+    
+    containerAtual.namedItem(tabAtual + "__container").className = "speakers__container speakers__container--not-show";
+    containers.namedItem(week[tab] + "__container").className = "speakers__container";
+    
+    var tabs = document.getElementsByClassName("speakers__tabs__tab speakers__tabs__tab--active");
+    tabs.item(0).className = "speakers__tabs__tab";
+    document.getElementById(tabAtual + "__button").className = "speakers__tabs__tab";
+    document.getElementById(week[tab] + "__button").className = "speakers__tabs__tab speakers__tabs__tab--active";
+    tabAtual = week[tab];
 }

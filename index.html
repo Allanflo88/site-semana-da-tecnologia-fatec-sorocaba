@@ -47,23 +47,211 @@
             </h2>
         </div>
         <div class="speakers__tabs">
-            <button class="speakers__tabs__tab speakers__tabs__tab--active">
+            <button id="monday__button" name="monday"class="speakers__tabs__tab speakers__tabs__tab--active" onclick="changeTab(0)">
                 Segunda
             </button>
-            <button class="speakers__tabs__tab">
+            <button id="tuesday__button" name="tuesday"class="speakers__tabs__tab" onclick="changeTab(1)">
                 Terça
             </button>
-            <button class="speakers__tabs__tab">
+            <button id="wednesday__button" name="wednesday"class="speakers__tabs__tab" onclick="changeTab(2)">
                 Quarta
             </button>
-            <button class="speakers__tabs__tab">
+            <button id="thursday__button" name="thursday"class="speakers__tabs__tab" onclick="changeTab(3)">
                 Quinta
             </button>
-            <button class="speakers__tabs__tab">
+            <button id="friday__button" name="friday" class="speakers__tabs__tab" onclick="changeTab(4)">
                 Sexta
             </button>
         </div>
-        <div class="speakers__container">
+        <div name="monday__container" class="speakers__container speakers__container--not-show">
+            <div class="speakers__container__speaker">
+                <div class="speakers__container__speaker__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="speakers__container__speaker__text">
+                    <div class="speakers__container__speaker__text name">
+                        <b>Juliana da Silva</b>
+                    </div>
+                    <div class="speakers__container__speaker__text talk">
+                        Boas práticas de programação
+                    </div>
+                    <div class="speakers__container__speaker__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="speakers__container__speaker">
+                <div class="speakers__container__speaker__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="speakers__container__speaker__text">
+                    <div class="speakers__container__speaker__text name">
+                        <b>Catarina da Rocha</b>
+                    </div>
+                    <div class="speakers__container__speaker__text talk">
+                        A importância do versionamento
+                    </div>
+                    <div class="speakers__container__speaker__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="tuesday__container" class="speakers__container speakers__container--not-show">
+            <div class="speakers__container__speaker">
+                <div class="speakers__container__speaker__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="speakers__container__speaker__text">
+                    <div class="speakers__container__speaker__text name">
+                        <b>Juliana da Silva</b>
+                    </div>
+                    <div class="speakers__container__speaker__text talk">
+                        Boas práticas de programação
+                    </div>
+                    <div class="speakers__container__speaker__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="speakers__container__speaker">
+                <div class="speakers__container__speaker__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="speakers__container__speaker__text">
+                    <div class="speakers__container__speaker__text name">
+                        <b>Catarina da Rocha</b>
+                    </div>
+                    <div class="speakers__container__speaker__text talk">
+                        A importância do versionamento
+                    </div>
+                    <div class="speakers__container__speaker__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="wednesday__container" class="speakers__container speakers__container--not-show">
+            <div class="speakers__container__speaker">
+                <div class="speakers__container__speaker__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="speakers__container__speaker__text">
+                    <div class="speakers__container__speaker__text name">
+                        <b>Juliana da Silva</b>
+                    </div>
+                    <div class="speakers__container__speaker__text talk">
+                        Boas práticas de programação
+                    </div>
+                    <div class="speakers__container__speaker__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="speakers__container__speaker">
+                <div class="speakers__container__speaker__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="speakers__container__speaker__text">
+                    <div class="speakers__container__speaker__text name">
+                        <b>Catarina da Rocha</b>
+                    </div>
+                    <div class="speakers__container__speaker__text talk">
+                        A importância do versionamento
+                    </div>
+                    <div class="speakers__container__speaker__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="thursday__container" class="speakers__container speakers__container--not-show">
+            <div class="speakers__container__speaker">
+                <div class="speakers__container__speaker__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="speakers__container__speaker__text">
+                    <div class="speakers__container__speaker__text name">
+                        <b>Juliana da Silva</b>
+                    </div>
+                    <div class="speakers__container__speaker__text talk">
+                        Boas práticas de programação
+                    </div>
+                    <div class="speakers__container__speaker__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="speakers__container__speaker">
+                <div class="speakers__container__speaker__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="speakers__container__speaker__text">
+                    <div class="speakers__container__speaker__text name">
+                        <b>Catarina da Rocha</b>
+                    </div>
+                    <div class="speakers__container__speaker__text talk">
+                        A importância do versionamento
+                    </div>
+                    <div class="speakers__container__speaker__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="friday__container" class="speakers__container speakers__container--not-show">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">

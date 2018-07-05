@@ -141,6 +141,7 @@ body {
   }
 
   &__container {
+
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -152,6 +153,11 @@ body {
       grid-template-rows: auto;
       justify-items: center;
     }
+
+    &--not-show {
+      display: none;
+    }
+
     &__speaker {
       display: flex;
       flex-flow: row;
