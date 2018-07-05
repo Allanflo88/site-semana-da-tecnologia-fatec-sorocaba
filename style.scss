@@ -120,7 +120,7 @@ body {
     text-align: center;
   }
 
-  &__speaker {
+  &__container {
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -132,33 +132,88 @@ body {
       grid-template-rows: auto;
       justify-items: center;
     }
+    &__speaker {
+      &__avatar {
+        border-radius: 100%;
+        margin-top: 30px !important;
+        width: 50%;
+        margin: auto;
+      }
 
-    &__avatar {
-      border-radius: 100%;
-      margin-top: 30px !important;
-      width: 50%;
-      margin: auto;
+      &__text {
+        margin-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
 
+        @include tablet {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .name {
+          text-align: center;
+        }
+
+        .talk {
+        }
+
+        .biography {
+        }
+      }
     }
+  }
+}
+.instructors {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 
-    &__text {
-      margin-bottom: 30px;
-      padding-left: 10px;
-      padding-right: 10px;
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+  }
 
-      @include tablet {
-        padding-left: 20px;
-        padding-right: 20px;
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+      justify-items: center;
+    }
+    &__instructor {
+      &__avatar {
+        border-radius: 100%;
+        margin-top: 30px !important;
+        width: 50%;
+        margin: auto;
       }
 
-      .name {
-        text-align: center;
-      }
+      &__text {
+        margin-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
 
-      .talk {
-      }
+        @include tablet {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
 
-      .biography {
+        .name {
+          text-align: center;
+        }
+
+        .course {
+        }
+
+        .biography {
+        }
       }
     }
   }
