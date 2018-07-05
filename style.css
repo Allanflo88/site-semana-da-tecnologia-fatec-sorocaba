@@ -78,7 +78,7 @@ body {
       color: #9c27b0;
       background-color: white;
       font-weight: bold; }
-      .speakers__tabs__tab:active {
+      .speakers__tabs__tab--active {
         background-color: #9c27b0;
         border: 0;
         color: white; }
