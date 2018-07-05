@@ -66,6 +66,7 @@ body {
 
   @include tablet {
     flex-flow: row;
+    justify-content: flex-start;
   }
 
   &__title {
@@ -77,6 +78,9 @@ body {
   }
 
   &__text {
+    @include tablet {
+      width: 60%;
+    }
   }
 }
 .call {
@@ -116,25 +120,49 @@ body {
     text-align: center;
   }
 
-  &__avatar {
-    border-radius: 100%;
-    margin-top: 30px;
-    width: 50%;
-  }
-
-  &__text {
-    margin-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    &__name {
-      text-align: center;
+  &__speaker {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+      justify-items: center;
     }
 
-    &__talk {
+    &__avatar {
+      border-radius: 100%;
+      margin-top: 30px;
+      width: 50%;
+
+      @include tablet {
+        margin-top: 30px !important;
+        margin: auto;
+      }
     }
 
-    &__biography {
+    &__text {
+      margin-bottom: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      @include tablet {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .name {
+        text-align: center;
+      }
+
+      .talk {
+      }
+
+      .biography {
+      }
     }
   }
 }
@@ -193,6 +221,10 @@ body {
     align-items: center;
     justify-items: center;
 
+    @include tablet {
+      grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
     img {
       width: 60%;
       margin-bottom: 10px;
@@ -243,6 +275,13 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  @include tablet {
+    flex-flow: row;
+    justify-content: space-between;
+  }
 
   &__logo {
     display: flex;
@@ -250,6 +289,10 @@ body {
     justify-content: center;
     align-content: center;
     position: relative;
+
+    @include tablet {
+      padding-left: 20px;
+    }
 
     img {
       height: 50px;
@@ -259,5 +302,11 @@ body {
 
   &__email {
     position: relative;
+    font-weight: bold;
+    color: white;
+
+    @include tablet {
+      padding-right: 20px;
+    }
   }
 }
