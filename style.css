@@ -45,7 +45,8 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 20px; }
   .call__title {
     color: white;
     text-transform: uppercase;
@@ -71,32 +72,41 @@ body {
   .speakers__tabs {
     width: 100%;
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%; }
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    z-index: 1; }
     .speakers__tabs__tab {
       border-radius: 0;
       border: 1px solid #9c27b0;
       color: #9c27b0;
       background-color: white;
-      font-weight: bold; }
+      font-weight: bold;
+      background-size: 0; }
       .speakers__tabs__tab--active {
         background-color: #9c27b0;
         border: 0;
-        color: white; }
+        color: white;
+        background-size: 100%;
+        transition: .5s ease-in; }
   .speakers__container {
     width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    opacity: 0;
+    height: 0; }
     @media (min-width: 768px) {
       .speakers__container {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         justify-items: center; } }
-    .speakers__container--not-show {
-      display: none; }
+    .speakers__container--active {
+      height: 100%;
+      opacity: 1;
+      transition: opacity .5s ease-in; }
     .speakers__container__speaker {
+      position: relative;
       display: flex;
       flex-flow: row;
       align-content: center;
@@ -140,34 +150,41 @@ body {
       border: 1px solid #9c27b0;
       color: #9c27b0;
       background-color: white;
+      background-size: 0;
       font-weight: bold;
-      width: 100%; }
+      width: 100%;
+      z-index: 1; }
       .instructors__tabs__tab--active {
         background-color: #9c27b0;
         border: 0;
-        color: white; }
+        color: white;
+        background-size: 100%;
+        transition: .5s ease-in; }
   .instructors__container {
     width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; }
+    height: 0;
+    opacity: 0; }
     @media (min-width: 768px) {
       .instructors__container {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         justify-items: center; } }
-    .instructors__container--not-show {
-      display: none; }
+    .instructors__container--active {
+      height: 100%;
+      opacity: 1;
+      transition: opacity .5s ease-in; }
     .instructors__container__instructor {
       display: flex;
       flex-flow: row;
       align-content: center;
       justify-items: center;
-      width: 100%;
-      margin-top: 20px; }
+      margin-top: 20px;
+      width: 100%; }
       .instructors__container__instructor__avatar {
         border-radius: 100%;
         width: 20%;

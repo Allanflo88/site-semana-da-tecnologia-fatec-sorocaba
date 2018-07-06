@@ -7,6 +7,12 @@ var previousPhotos = ["purple", "black", "blue", "red"],
     tabAtual = "monday",
     tabAreaAtual = "frontend";
 
+/*var frontend__button = document.getElementById("frontend__button")
+
+    frontend__button.addEventListener('click', (ev)=>{
+        frontend__button.style.transform = "";
+    })*/
+
 function nextOrganizer() {
     if(organizer < organizers.length-1){
         organizer += 1;
@@ -59,11 +65,11 @@ function previousPhoto(){
 }
 function changeTab(tab){
     var week = ["monday", "tuesday", "wednesday", "thursday", "friday"];
-    var containers = document.getElementsByClassName("speakers__container speakers__container--not-show");
-    var containerAtual = document.getElementsByClassName("speakers__container");
+    var containers = document.getElementsByClassName("speakers__container");
+    var containerAtual = document.getElementsByClassName("speakers__container speakers__container--active");
     
-    containerAtual.namedItem(tabAtual + "__container").className = "speakers__container speakers__container--not-show";
-    containers.namedItem(week[tab] + "__container").className = "speakers__container";
+    containerAtual.namedItem(tabAtual + "__container").className = "speakers__container";
+    containers.namedItem(week[tab] + "__container").className = "speakers__container speakers__container--active";
     
     var tabs = document.getElementsByClassName("speakers__tabs__tab speakers__tabs__tab--active");
     tabs.item(0).className = "speakers__tabs__tab";
@@ -75,11 +81,11 @@ function changeTab(tab){
 function changeTabArea(tab){
 
     var areas = ["frontend", "backend"];
-    var containers = document.getElementsByClassName("instructors__container instructors__container--not-show");
-    var containerAtual = document.getElementsByClassName("instructors__container");
+    var containers = document.getElementsByClassName("instructors__container");
+    var containerAtual = document.getElementsByClassName("instructors__container instructors__container--active");
 
-    containerAtual.namedItem(tabAreaAtual + "__container").className = "instructors__container instructors__container--not-show";
-    containers.namedItem(areas[tab] + "__container").className = "instructors__container";
+    containerAtual.namedItem(tabAreaAtual + "__container").className = "instructors__container";
+    containers.namedItem(areas[tab] + "__container").className = "instructors__container instructors__container--active";
     
     var tabs = document.getElementsByClassName("instructors__tabs__tab instructors__tabs__tab--active");
     tabs.item(0).className = "speakers__tabs__tab";
