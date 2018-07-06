@@ -107,6 +107,18 @@ body {
     color: #270327;
     font-weight: bold;
     text-transform: uppercase;
+    background-image: url("./images/dblArrow.svg");
+    background-position: -100%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+
+
+    &--active{
+
+      background-position: 120%;
+      transition: background-position 1s ease-in-out;
+      
+    }
   }
 }
 .speakers {

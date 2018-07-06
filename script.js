@@ -94,3 +94,14 @@ function changeTabArea(tab){
     
     tabAreaAtual = areas[tab];
 }
+
+function animateButton(){
+    var button = document.getElementById("call__button")
+    button.className = "call__button call__button--active";
+    button.innerText = "";
+    setTimeout(()=>{
+        window.location.href = "http://www.fatecsorocaba.edu.br/";
+        window.location.assign("http://www.fatecsorocaba.edu.br/");
+    }, 1000);
+
+}
