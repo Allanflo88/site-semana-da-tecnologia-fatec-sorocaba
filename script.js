@@ -4,7 +4,8 @@ var previousPhotos = ["purple", "black", "blue", "red"],
     photo = 0,
     organizers = ["purple", "black", "blue", "red"],
     organizer = 0,
-    tabAtual = "monday"
+    tabAtual = "monday",
+    tabAreaAtual = "frontend";
 
 function nextOrganizer() {
     if(organizer < organizers.length-1){
@@ -69,4 +70,21 @@ function changeTab(tab){
     document.getElementById(tabAtual + "__button").className = "speakers__tabs__tab";
     document.getElementById(week[tab] + "__button").className = "speakers__tabs__tab speakers__tabs__tab--active";
     tabAtual = week[tab];
+}
+
+function changeTabArea(tab){
+
+    var areas = ["frontend", "backend"];
+    var containers = document.getElementsByClassName("instructors__container instructors__container--not-show");
+    var containerAtual = document.getElementsByClassName("instructors__container");
+
+    containerAtual.namedItem(tabAreaAtual + "__container").className = "instructors__container instructors__container--not-show";
+    containers.namedItem(areas[tab] + "__container").className = "instructors__container";
+    
+    var tabs = document.getElementsByClassName("instructors__tabs__tab instructors__tabs__tab--active");
+    tabs.item(0).className = "speakers__tabs__tab";
+    document.getElementById(tabAreaAtual + "__button").className = "instructors__tabs__tab";
+    document.getElementById(areas[tab] + "__button").className = "instructors__tabs__tab instructors__tabs__tab--active";
+    
+    tabAreaAtual = areas[tab];
 }

@@ -47,16 +47,16 @@
             </h2>
         </div>
         <div class="speakers__tabs">
-            <button id="monday__button" name="monday"class="speakers__tabs__tab speakers__tabs__tab--active" onclick="changeTab(0)">
+            <button id="monday__button" name="monday" class="speakers__tabs__tab speakers__tabs__tab--active" onclick="changeTab(0)">
                 Segunda
             </button>
-            <button id="tuesday__button" name="tuesday"class="speakers__tabs__tab" onclick="changeTab(1)">
+            <button id="tuesday__button" name="tuesday" class="speakers__tabs__tab" onclick="changeTab(1)">
                 Terça
             </button>
-            <button id="wednesday__button" name="wednesday"class="speakers__tabs__tab" onclick="changeTab(2)">
+            <button id="wednesday__button" name="wednesday" class="speakers__tabs__tab" onclick="changeTab(2)">
                 Quarta
             </button>
-            <button id="thursday__button" name="thursday"class="speakers__tabs__tab" onclick="changeTab(3)">
+            <button id="thursday__button" name="thursday" class="speakers__tabs__tab" onclick="changeTab(3)">
                 Quinta
             </button>
             <button id="friday__button" name="friday" class="speakers__tabs__tab" onclick="changeTab(4)">
@@ -303,18 +303,25 @@
         <div class="instructors__title">
             <h2>Instrutores confirmados</h2>
         </div>
-        <div class="instructors__container">
+        <div class="instructors__tabs">
+            <button id="frontend__button" name="frontend" class="instructors__tabs__tab instructors__tabs__tab--active" onclick="changeTabArea(0)">
+                Frontend
+            </button>
+            <button id="backend__button" name="backend" class="instructors__tabs__tab" onclick="changeTabArea(1)">
+                Backend
+            </button>
+        </div>
+        <div name="frontend__container" class="instructors__container">
             <div class="instructors__container__instructor">
                 <div class="instructors__container__instructor__avatar">
                     <img src="./images/avatar.svg">
                 </div>
                 <div class="instructors__container__instructor__text">
                     <div class="instructors__container__instructor__text name">
-                        <h3>Maria do Carmo</h3>
+                        <b>Maria do Carmo</b>
                     </div>
                     <div class="instructors__container__instructor__text course">
-                        <b>Curso:</b>
-                        <p>Javascript para iniciantes</p>
+                        Mastering CSS
                     </div>
                     <div class="instructors__container__instructor__text biography">
                         <b>Quem sou eu:</b>
@@ -333,11 +340,56 @@
                 </div>
                 <div class="instructors__container__instructor__text">
                     <div class="instructors__container__instructor__text name">
-                        <h3>Maria do Carmo</h3>
+                        <b>Maria do Carmo</b>
                     </div>
                     <div class="instructors__container__instructor__text course">
-                        <b>Curso:</b>
-                        <p>Javascript para iniciantes</p>
+                        Angular para iniciantes
+                    </div>
+                    <div class="instructors__container__instructor__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="backend__container" class="instructors__container instructors__container--not-show">
+            <div class="instructors__container__instructor">
+                <div class="instructors__container__instructor__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="instructors__container__instructor__text">
+                    <div class="instructors__container__instructor__text name">
+                        <b>Julia Maria</b>
+                    </div>
+                    <div class="instructors__container__instructor__text course">
+                        Java para iniciantes
+                    </div>
+                    <div class="instructors__container__instructor__text biography">
+                        <b>Quem sou eu:</b>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet lacus mollis eget. Ut
+                            interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam dictum ultrices ornare
+                            vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem sed aliquet finibus,
+                            justo tortor tincidunt mauris.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="instructors__container__instructor">
+                <div class="instructors__container__instructor__avatar">
+                    <img src="./images/avatar.svg">
+                </div>
+                <div class="instructors__container__instructor__text">
+                    <div class="instructors__container__instructor__text name">
+                        <b>Carla Mendes</b>
+                    </div>
+                    <div class="instructors__container__instructor__text course">
+                        Java avançado
                     </div>
                     <div class="instructors__container__instructor__text biography">
                         <b>Quem sou eu:</b>

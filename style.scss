@@ -211,30 +211,67 @@ body {
     text-align: center;
   }
 
+  &__tabs {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+
+    &__tab {
+      border-radius: 0;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      background-color: white;
+      font-weight: bold;
+      width: 100%;
+
+      &--active {
+        background-color: $primary-color;
+        border: 0;
+        color: white;
+      }
+    }
+  }
+
   &__container {
     width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
     @include tablet {
       display: grid;
       grid-template-columns: 50% 50%;
       grid-template-rows: auto;
       justify-items: center;
     }
+
+    &--not-show {
+      display: none;
+    }
+
     &__instructor {
+      display: flex;
+      flex-flow: row;
+      align-content: center;
+      justify-items: center;
+      width: 100%;
+      margin-top: 20px;
+
       &__avatar {
         border-radius: 100%;
-        margin-top: 30px !important;
-        width: 50%;
-        margin: auto;
+        width: 20%;
+        padding-right: 10px;
+        padding-left: 10px;
       }
 
       &__text {
-        margin-bottom: 30px;
-        padding-left: 10px;
         padding-right: 10px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        font-size: small;
+        width: 100%;
 
         @include tablet {
           padding-left: 20px;
@@ -242,13 +279,13 @@ body {
         }
 
         .name {
-          text-align: center;
         }
 
         .course {
         }
 
         .biography {
+          display: none;
         }
       }
     }

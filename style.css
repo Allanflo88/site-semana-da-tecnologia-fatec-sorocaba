@@ -131,33 +131,61 @@ body {
   .instructors__title {
     text-transform: uppercase;
     text-align: center; }
+  .instructors__tabs {
+    width: 100%;
+    display: flex;
+    flex-flow: row; }
+    .instructors__tabs__tab {
+      border-radius: 0;
+      border: 1px solid #9c27b0;
+      color: #9c27b0;
+      background-color: white;
+      font-weight: bold;
+      width: 100%; }
+      .instructors__tabs__tab--active {
+        background-color: #9c27b0;
+        border: 0;
+        color: white; }
   .instructors__container {
     width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 20px; }
     @media (min-width: 768px) {
       .instructors__container {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         justify-items: center; } }
-    .instructors__container__instructor__avatar {
-      border-radius: 100%;
-      margin-top: 30px !important;
-      width: 50%;
-      margin: auto; }
-    .instructors__container__instructor__text {
-      margin-bottom: 30px;
-      padding-left: 10px;
-      padding-right: 10px; }
-      @media (min-width: 768px) {
-        .instructors__container__instructor__text {
-          padding-left: 20px;
-          padding-right: 20px; } }
-      .instructors__container__instructor__text .name {
-        text-align: center; }
+    .instructors__container--not-show {
+      display: none; }
+    .instructors__container__instructor {
+      display: flex;
+      flex-flow: row;
+      align-content: center;
+      justify-items: center;
+      width: 100%;
+      margin-top: 20px; }
+      .instructors__container__instructor__avatar {
+        border-radius: 100%;
+        width: 20%;
+        padding-right: 10px;
+        padding-left: 10px; }
+      .instructors__container__instructor__text {
+        padding-right: 10px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        font-size: small;
+        width: 100%; }
+        @media (min-width: 768px) {
+          .instructors__container__instructor__text {
+            padding-left: 20px;
+            padding-right: 20px; } }
+        .instructors__container__instructor__text .biography {
+          display: none; }
 
 .previous {
   width: 100%; }
