@@ -83,17 +83,18 @@ body {
     z-index: 1; }
     .speakers__tabs__tab {
       border-radius: 0;
-      border: 1px solid #9c27b0;
+      border: 0;
       color: #9c27b0;
       background-color: white;
+      background-image: url("./images/empty_hexagon.svg");
       font-weight: bold;
-      background-size: 0; }
+      background-size: 80px;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 80px; }
       .speakers__tabs__tab--active {
-        background-color: #9c27b0;
-        border: 0;
         color: white;
-        background-size: 100%;
-        transition: .5s ease-in; }
+        background-image: url("./images/full_hexagon.svg"); }
   .speakers__container {
     width: 100%;
     display: flex;
@@ -111,7 +112,7 @@ body {
     .speakers__container--active {
       height: 100%;
       opacity: 1;
-      transition: opacity .5s ease-in; }
+      transition: opacity 0.5s ease-in; }
     .speakers__container__speaker {
       position: relative;
       display: flex;
@@ -166,7 +167,7 @@ body {
         border: 0;
         color: white;
         background-size: 100%;
-        transition: .5s ease-in; }
+        transition: 0.5s ease-in; }
   .instructors__container {
     width: 100%;
     display: flex;
@@ -184,7 +185,7 @@ body {
     .instructors__container--active {
       height: 100%;
       opacity: 1;
-      transition: opacity .5s ease-in; }
+      transition: opacity 0.5s ease-in; }
     .instructors__container__instructor {
       display: flex;
       flex-flow: row;
