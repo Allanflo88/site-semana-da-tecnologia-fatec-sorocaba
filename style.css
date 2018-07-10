@@ -78,9 +78,13 @@ body {
     text-align: center; }
   .speakers__tabs {
     width: 100%;
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    display: flex;
+    flex-flow: column;
     z-index: 1; }
+    .speakers__tabs .container {
+      display: flex;
+      flex-flow: row;
+      justify-content: center; }
     .speakers__tabs__tab {
       border-radius: 0;
       border: 0;
@@ -91,7 +95,9 @@ body {
       background-size: 80px;
       background-repeat: no-repeat;
       background-position: center;
-      height: 80px; }
+      height: 80px;
+      padding: 0;
+      width: 30%; }
       .speakers__tabs__tab--active {
         color: white;
         background-image: url("./images/full_hexagon.svg"); }

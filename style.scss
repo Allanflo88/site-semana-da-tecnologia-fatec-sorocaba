@@ -132,10 +132,15 @@ body {
 
   &__tabs {
     width: 100%;
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    display: flex;
+    flex-flow: column;
     z-index: 1;
 
+    .container {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+    }
     &__tab {
       border-radius: 0;
       border: 0;
@@ -147,6 +152,8 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       height: 80px;
+      padding: 0;
+      width: 30%;
 
       &--active {
         color: white;
