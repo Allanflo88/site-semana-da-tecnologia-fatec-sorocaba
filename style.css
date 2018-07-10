@@ -95,9 +95,9 @@ body {
       background-size: 80px;
       background-repeat: no-repeat;
       background-position: center;
-      height: 80px;
+      height: 70px;
       padding: 0;
-      width: 30%; }
+      width: 27%; }
       .speakers__tabs__tab--active {
         color: white;
         background-image: url("./images/full_hexagon.svg"); }
