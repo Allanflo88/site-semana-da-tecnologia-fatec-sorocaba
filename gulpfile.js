@@ -12,15 +12,5 @@ gulp.task('sass', () => {
     }
 );
 
-gulp.task('html',()=>{
-    return gulp.src('./index.html')
-        .pipe(gulp.dest('./dist'));
-});
 
-gulp.task('javascript',()=>{
-    return gulp.src('./script.js')
-        .pipe(gulp.dest('./dist'));
-});
-
-
-gulp.task('default', gulp.series('html','sass','javascript'));
+gulp.task('default', gulp.series('sass'));
