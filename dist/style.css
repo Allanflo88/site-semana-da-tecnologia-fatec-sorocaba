@@ -233,20 +233,30 @@ body {
     text-align: center;
     text-transform: uppercase; }
   .previous__gallery {
+    background-color: #270327;
     width: 100%;
     height: 50vh;
-    background-color: #9c27b0;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-between; }
-    .previous__gallery__button--previous img {
-      transform: rotate(180deg);
-      width: 20px;
-      height: 20px; }
-    .previous__gallery__button--next img {
-      width: 20px;
-      height: 20px; }
+    .previous__gallery__image {
+      width: 0;
+      height: 100%;
+      background-color: white; }
+      .previous__gallery__image--left {
+        width: 50%; }
+      .previous__gallery__image--right {
+        width: 50%; }
+    .previous__gallery__button {
+      position: absolute; }
+      .previous__gallery__button--previous img {
+        transform: rotate(180deg);
+        width: 20px;
+        height: 20px; }
+      .previous__gallery__button--next img {
+        width: 20px;
+        height: 20px; }
 
 .sponsors {
   width: 100%;

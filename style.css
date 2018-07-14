@@ -233,20 +233,38 @@ body {
     text-align: center;
     text-transform: uppercase; }
   .previous__gallery {
+    background-color: #270327;
     width: 100%;
     height: 50vh;
-    background-color: #9c27b0;
     display: flex;
     flex-flow: row;
     align-items: center;
-    justify-content: space-between; }
-    .previous__gallery__button--previous img {
-      transform: rotate(180deg);
-      width: 20px;
-      height: 20px; }
-    .previous__gallery__button--next img {
-      width: 20px;
-      height: 20px; }
+    justify-content: center;
+    overflow: hidden; }
+    .previous__gallery__image {
+      width: 75%;
+      height: auto;
+      background-color: white;
+      transition: 1s ease-out;
+      transform: translateX(0); }
+      .previous__gallery__image--left {
+        transform: translateX(-100%); }
+      .previous__gallery__image--right {
+        transform: translateX(100%); }
+    .previous__gallery__button {
+      position: absolute;
+      z-index: 1; }
+      .previous__gallery__button--previous {
+        right: 93vw; }
+        .previous__gallery__button--previous img {
+          transform: rotate(180deg);
+          width: 20px;
+          height: 20px; }
+      .previous__gallery__button--next {
+        left: 93vw; }
+        .previous__gallery__button--next img {
+          width: 20px;
+          height: 20px; }
 
 .sponsors {
   width: 100%;

@@ -10,7 +10,7 @@
     <title>Semana de tecnologia</title>
 </head>
 
-<body>
+<body onload="start()">
     <header class="header">
         <div class="header__title">
             <h1>Semana de tecnologia</h1>
@@ -427,11 +427,16 @@
         </div>
         <div id="gallery" class="previous__gallery">
             <div class="previous__gallery__button previous__gallery__button--previous" onclick="previousPhoto()">
-                <img src="./images//arrow.svg">
+                <img src="./images/arrow.svg">
             </div>
             <div class="previous__gallery__button previous__gallery__button--next" onclick="nextPhoto()">
-                <img src="./images//arrow.svg">
+                <img src="./images/arrow.svg">
             </div>
+            <img id="img0"class="previous__gallery__image" src="./images/previous/golang.jpg" alt="">
+            <img id="img1"class="previous__gallery__image previous__gallery__image--right" src="./images/previous/java.jpg" alt="">
+            <img id="img2"class="previous__gallery__image previous__gallery__image--right" src="./images/previous/javascript.jpg" alt="">
+            <img id="img3"class="previous__gallery__image previous__gallery__image--right" src="./images/previous/php.jpg" alt="">
+            <img id="img4"class="previous__gallery__image previous__gallery__image--right" src="./images/previous/python.jpg" alt="">
         </div>
     </section>
     <section class="sponsors">
