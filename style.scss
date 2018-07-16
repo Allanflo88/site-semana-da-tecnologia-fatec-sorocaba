@@ -45,7 +45,8 @@ body {
   justify-content: center;
   align-items: center;
   &__title {
-    width: 100%;
+    width: 80%;
+    height: auto;
 
     @include tablet {
       font-size: x-large;
