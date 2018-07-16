@@ -78,8 +78,18 @@ body {
   }
 
   &__text {
-    
     text-align: justify;
+
+    a {
+      font-weight: bold;
+      background-color: $primary-color;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary-green;
+      }
+    }
 
     @include tablet {
       width: 60%;
@@ -359,11 +369,11 @@ body {
       transition: 1s ease-out;
       transform: translateX(0);
 
-      &--left{
+      &--left {
         transform: translateX(-100%);
       }
 
-      &--right{
+      &--right {
         transform: translateX(100%);
       }
     }
@@ -436,7 +446,7 @@ body {
     align-items: center;
 
     &__image {
-      width: 75vw;
+      width: 75%;
       height: auto;
       background-color: white;
     }

@@ -36,6 +36,13 @@ body {
         width: 30%; } }
   .introduction__text {
     text-align: justify; }
+    .introduction__text a {
+      font-weight: bold;
+      background-color: #9c27b0;
+      color: white;
+      text-decoration: none; }
+      .introduction__text a:hover {
+        color: #b2ff59; }
     @media (min-width: 768px) {
       .introduction__text {
         width: 60%; } }
@@ -302,7 +309,7 @@ body {
     flex-flow: row;
     align-items: center; }
     .organization__carousel__image {
-      width: 75vw;
+      width: 75%;
       height: auto;
       background-color: white; }
     .organization__carousel__button {
