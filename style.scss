@@ -53,6 +53,7 @@ body {
 
     img {
       width: 100%;
+      fill: white;
     }
   }
 }
@@ -352,7 +353,7 @@ body {
     overflow: hidden;
 
     &__image {
-      width: 75vh;
+      width: 75%;
       height: auto;
       background-color: white;
       transition: 1s ease-out;
@@ -435,7 +436,7 @@ body {
     align-items: center;
 
     &__image {
-      width: 75vh;
+      width: 75vw;
       height: auto;
       background-color: white;
     }

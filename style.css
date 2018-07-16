@@ -16,7 +16,8 @@ body {
       .header__title {
         font-size: x-large; } }
     .header__title img {
-      width: 100%; }
+      width: 100%;
+      fill: white; }
 
 .introduction {
   display: flex;
@@ -241,7 +242,7 @@ body {
     justify-content: center;
     overflow: hidden; }
     .previous__gallery__image {
-      width: 75vh;
+      width: 75%;
       height: auto;
       background-color: white;
       transition: 1s ease-out;
@@ -301,7 +302,7 @@ body {
     flex-flow: row;
     align-items: center; }
     .organization__carousel__image {
-      width: 75vh;
+      width: 75vw;
       height: auto;
       background-color: white; }
     .organization__carousel__button {
