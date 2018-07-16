@@ -11,13 +11,12 @@ body {
   justify-content: center;
   align-items: center; }
   .header__title {
-    color: white;
-    text-transform: uppercase; }
+    width: 100%; }
     @media (min-width: 768px) {
       .header__title {
         font-size: x-large; } }
-    .header__title h1 {
-      text-align: center; }
+    .header__title img {
+      width: 100%; }
 
 .introduction {
   display: flex;
@@ -255,13 +254,13 @@ body {
       position: absolute;
       z-index: 1; }
       .previous__gallery__button--previous {
-        right: 93vw; }
+        left: 0; }
         .previous__gallery__button--previous img {
           transform: rotate(180deg);
           width: 20px;
           height: 20px; }
       .previous__gallery__button--next {
-        left: 93vw; }
+        right: 0; }
         .previous__gallery__button--next img {
           width: 20px;
           height: 20px; }
@@ -294,24 +293,33 @@ body {
   .organization__title {
     text-align: center;
     text-transform: uppercase; }
-  .organization__carroussel {
+  .organization__carousel {
     width: 100%;
     height: 50vh;
     background-color: #9c27b0;
     display: flex;
     flex-flow: row;
-    align-items: center;
-    justify-content: space-between; }
-    .organization__carroussel__button {
+    align-items: center; }
+    .organization__carousel__image {
+      width: 75vh;
+      height: auto;
+      background-color: white; }
+    .organization__carousel__button {
+      position: absolute;
       width: 20px;
-      height: 20px; }
-      .organization__carroussel__button--previous img {
-        transform: rotate(180deg);
-        width: 20px;
-        height: 20px; }
-      .organization__carroussel__button--next img {
-        width: 20px;
-        height: 20px; }
+      height: 20px;
+      z-index: 1; }
+      .organization__carousel__button--previous {
+        left: 0; }
+        .organization__carousel__button--previous img {
+          transform: rotate(180deg);
+          width: 20px;
+          height: 20px; }
+      .organization__carousel__button--next {
+        right: 0; }
+        .organization__carousel__button--next img {
+          width: 20px;
+          height: 20px; }
 
 .footer {
   background-color: #9c27b0;
