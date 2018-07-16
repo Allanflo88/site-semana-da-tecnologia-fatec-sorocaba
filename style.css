@@ -12,17 +12,16 @@ body {
   align-items: center; }
   .header__title {
     width: 80vw;
-    height: 80vh;
-    /*background-image: url("./images/header.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;*/ }
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    height: 80vh; }
+    .header__title object {
+      width: 100%;
+      height: auto; }
     @media (min-width: 768px) {
       .header__title {
         font-size: x-large; } }
-    .header__title img {
-      width: 100%;
-      fill: white; }
 
 .introduction {
   display: flex;

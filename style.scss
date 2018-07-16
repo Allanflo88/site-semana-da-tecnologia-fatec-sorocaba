@@ -46,19 +46,17 @@ body {
   align-items: center;
   &__title {
     width: 80vw;
+    align-items: center;
+    display: flex;
+    flex-flow: row;
     height: 80vh;
-    /*background-image: url("./images/header.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;*/
+    object {
+      width: 100%;
+      height: auto;
+    }
 
     @include tablet {
       font-size: x-large;
-    }
-
-    img {
-      width: 100%;
-      fill: white;
     }
   }
 }
