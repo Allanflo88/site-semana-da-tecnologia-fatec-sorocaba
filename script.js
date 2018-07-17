@@ -3,9 +3,9 @@
 var photo = 0,
   tabAtual = "monday",
   tabAreaAtual = "frontend",
-  changingSlide = "",
+  changingSlide = 0,
   actualOrganizer = "";
-  
+
 function start() {
   for (var i = 1; i < 5; i++) {
     document.getElementById("img" + i).style.width = "0";
@@ -14,37 +14,24 @@ function start() {
 
 function nextPhoto() {
   if (photo < 4) {
-    if (changingSlide) {
-      window.clearTimeout(changingSlide);
-      document.getElementById("img" + photo).style.width = "0";
-    }
-
     document.getElementById("img" + photo).className =
       "previous__gallery__image previous__gallery__image--left";
     photo += 1;
     document.getElementById("img" + photo).style.width = "75%";
     document.getElementById("img" + photo).className =
       "previous__gallery__image";
-    changingSlide = window.setTimeout(() => {
-      document.getElementById("img" + (photo - 1)).style.width = "0";
-    }, 1000);
+    document.getElementById("img" + (photo - 1)).style.width = "0";
   }
 }
 function previousPhoto() {
   if (photo > 0) {
-    if (changingSlide) {
-      window.clearTimeout(changingSlide);
-      document.getElementById("img" + photo).style.width = "0";
-    }
     document.getElementById("img" + photo).className =
       "previous__gallery__image previous__gallery__image--right";
     photo -= 1;
     document.getElementById("img" + photo).style.width = "75%";
     document.getElementById("img" + photo).className =
       "previous__gallery__image";
-    changingSlide = window.setTimeout(() => {
-      document.getElementById("img" + (photo + 1)).style.width = "0";
-    }, 1000);
+    document.getElementById("img" + (photo + 1)).style.width = "0";
   }
 }
 function changeTab(tab) {

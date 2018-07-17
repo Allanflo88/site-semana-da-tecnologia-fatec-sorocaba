@@ -370,13 +370,14 @@ body {
       height: auto;
       background-color: white;
       transition: 1s ease-out;
-      transform: translateX(0);
 
       &--left {
+        width: 0;
         transform: translateX(-100%);
       }
 
       &--right {
+        width: 0;
         transform: translateX(100%);
       }
     }

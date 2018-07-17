@@ -15,7 +15,7 @@ body {
     align-items: center;
     display: flex;
     flex-flow: row;
-    height: 80vh; }
+    height: auto; }
     .header__title object {
       width: 100%;
       height: auto; }
@@ -256,11 +256,12 @@ body {
       width: 75%;
       height: auto;
       background-color: white;
-      transition: 1s ease-out;
-      transform: translateX(0); }
+      transition: 1s ease-out; }
       .previous__gallery__image--left {
+        width: 0;
         transform: translateX(-100%); }
       .previous__gallery__image--right {
+        width: 0;
         transform: translateX(100%); }
     .previous__gallery__button {
       position: absolute;
