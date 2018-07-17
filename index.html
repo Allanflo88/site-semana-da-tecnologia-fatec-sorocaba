@@ -22,9 +22,9 @@
         </div>
         <div class="introduction__text">
             <p>
-                A Semana de Tecnologia é um evento organizado pelos
-                <a href="#organizers">alunos</a> e para os alunos do curso de Análise e Desenvolvimento de Sistemas da Fatec Sorocaba. Proporcionando
-                a oportunidade do acesso a minicursos, palestras e conhecer novas pessoas que estão no mercado.
+                A Semana de Tecnologia é um evento organizado de
+                <a href="#organizers" onclick="showOrganizers()">alunos</a> para alunos do curso de Análise e Desenvolvimento de Sistemas da Fatec Sorocaba. Ele oferece gratuitamente
+                o acesso a minicursos, palestras e a grande oportunidade de conhecer pessoas que já atuam no mercado de trabalho
             </p>
         </div>
     </section>
@@ -34,10 +34,10 @@
         </div>
         <div class="introduction__text">
             <p>
-                Os objetivos da Semana de Tecnologia do curso de Análise e Desenvolvimento de Sistemas da Fatec Sorocaba é o de trazer conhecimento
-                e pessoas que estejam no mercado de trabalho para os alunos da nossa faculdade e outros que por ventura venham
-                ao nosso evento de uma maneira mais fácil para absorver o conhecimento e aumentar a rede de cada pessoa.
-                Proporcionando oportunidades únicas para adquirir conhecimento e conhecer novas pessoas.
+                Nosso objetivo é trazer o conhecimento de diversos profissionais da área de T.I para os alunos da nossa faculdade e para
+                todos aqueles que por ventura venham ao nosso evento, de modo a oferecer a cada um, uma maneira mais fácil
+                de absorver o conhecimento distribuído e de aumentar a suas redes de contato, conhecendo novas pessoas e
+                suas experiências sobre a área.
             </p>
         </div>
     </section>
@@ -459,204 +459,360 @@
         </div>
     </section>
     <section id="organizers" class="organization">
-        <div class="organization__title">
-            <h2>
+        <div id="organizer__title" class="organization__button" onclick="showOrganizers()">
+            <div class="organization__button__text">
                 Organização
-            </h2>
+            </div>
+            <img class="organization__button__arrow" src="./images/arrow-purple.svg">
         </div>
-        <div class="organization__container">
+        <div id="organizer__container" class="organization__container">
             <div class="organization__container__organizer">
                 <img src="./images/organizers/airton.jpg" alt="" class="organization__container__organizer__avatar">
                 <div class="organization__container__organizer__text">
                     Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                    <img src="./images/arrow.svg" onclick="showOrganizer(1)">
                 </div>
+
+            </div>
+            <div id="organizer1" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/alex.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">
+                    Alex
+                    <img src="./images/arrow.svg" onclick="showOrganizer(2)">
                 </div>
+
+            </div>
+            <div id="organizer2" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/allan.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">
+                    Allan Flores de Jesus
+                    <img src="./images/arrow.svg" onclick="showOrganizer(3)">
                 </div>
+            </div>
+            <div id="organizer3" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/andre.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">André
+                    <img src="./images/arrow.svg" onclick="showOrganizer(4)">
+
                 </div>
+            </div>
+            <div id="organizer4" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/angelino.jpg" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">Angelino
+                    <img src="./images/arrow.svg" onclick="showOrganizer(5)">
+
                 </div>
+            </div>
+            <div id="organizer5" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/barbara.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">Bárbara Sajo
+                    <img src="./images/arrow.svg" onclick="showOrganizer(6)">
                 </div>
+            </div>
+            <div id="organizer6" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/bia.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">Beatriz
+                    <img src="./images/arrow.svg" onclick="showOrganizer(7)">
+
                 </div>
+            </div>
+            <div id="organizer7" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/christian.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">Christian
+                    <img src="./images/arrow.svg" onclick="showOrganizer(8)">
+
                 </div>
+            </div>
+            <div id="organizer8" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/eduardo.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">Eduardo Son
+                    <img src="./images/arrow.svg" onclick="showOrganizer(9)">
+
                 </div>
+            </div>
+            <div id="organizer9" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/elet.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">Élet
+                    <img src="./images/arrow.svg" onclick="showOrganizer(10)">
+
                 </div>
+            </div>
+            <div id="organizer10" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/felipe.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">Felipe Bernardes
+                    <img src="./images/arrow.svg" onclick="showOrganizer(11)">
+
                 </div>
+            </div>
+            <div id="organizer11" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
             <div class="organization__container__organizer">
                 <img src="./images/organizers/guiS.jpg" alt="" class="organization__container__organizer__avatar">
-                <div class="organization__container__organizer__text">Airton Marcelo Brasil
-                    <div>
-                        <a>
-                            <img src="./images/github.svg">
-                        </a>
-                        <a>
-                            <img src="./images/linkedin.svg">
-                        </a>
-                        <a>
-                            <img src="./images/facebook.svg">
-                        </a>
-                    </div>
+                <div class="organization__container__organizer__text">Guilherme Sernajoto
+                    <img src="./images/arrow.svg" onclick="showOrganizer(12)">
                 </div>
+            </div>
+            <div id="organizer12" class="organization__container__collapse">
+                <div class="organization__container__collapse__text">
+                    <b>Quem sou: </b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor mattis mauris, a imperdiet
+                        lacus mollis eget. Ut interdum dui non tortor tincidunt sodales. Quisque condimentum neque a quam
+                        dictum ultrices ornare vitae orci. Vivamus eleifend vel purus et cursus. Aliquam ultrices, lorem
+                        sed aliquet finibus, justo tortor tincidunt mauris.
+                    </p>
+                </div>
+                <div class="organization__container__collapse__links">
+                    <a>
+                        <img src="./images/github.svg">
+                    </a>
+                    <a>
+                        <img src="./images/linkedin.svg">
+                    </a>
+                    <a>
+                        <img src="./images/facebook.svg">
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>

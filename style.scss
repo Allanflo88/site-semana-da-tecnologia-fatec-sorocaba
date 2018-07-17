@@ -435,18 +435,62 @@ body {
 }
 .organization {
   width: 100%;
+  margin-bottom: 30px;
   &__title {
+    flex-flow: column;
+    align-items: center;
     text-align: center;
     text-transform: uppercase;
+    display: flex;
+    &__text {
+      display: block;
+      font-size: 1.5em;
+      -webkit-margin-before: 0.83em;
+      -webkit-margin-after: 0.83em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      font-weight: bold;
+    }
+    &__arrow {
+      display: none;
+    }
+  }
+  &__button {
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    color: $primary-color;
+    width: 40vh;
+    margin: auto;
+
+    &__text {
+      display: block;
+      font-size: 1.5em;
+      -webkit-margin-before: 0.83em;
+      -webkit-margin-after: 0;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      font-weight: bold;
+    }
+    &__arrow {
+      width: 10vw;
+      height: auto;
+      transform: rotate(90deg);
+    }
   }
 
   &__container {
     width: 100%;
-    display: flex;
-    flex-flow: column;
+    margin-left: 10px;
+    display: none;
 
-    &--DisplayNone {
-      display: none;
+    &--show {
+      display: flex;
+      flex-flow: column;
     }
 
     &__organizer {
@@ -466,16 +510,41 @@ body {
       &__text {
         font-weight: bold;
         display: flex;
-        flex-flow: column;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
 
-        div {
-          display: flex;
-          flex-flow: row;
+        img {
+          transform: rotate(90deg);
+          width: 5vw;
+          height: auto;
+        }
+      }
+    }
+    &__collapse {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      height: 0;
+      visibility: hidden;
 
-          img {
-            width: 10vw;
-            height: auto;
-          }
+      &--show {
+        height: auto;
+        visibility: visible;
+
+      }
+
+      &__text {
+      }
+
+      &__links {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        img {
+          width: 8vw;
+          height: auto;
         }
       }
     }

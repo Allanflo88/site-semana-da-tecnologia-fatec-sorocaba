@@ -5,8 +5,8 @@ var photo = 0,
   organizer = 0,
   tabAtual = "monday",
   tabAreaAtual = "frontend",
-  changingSlide = "";
-
+  changingSlide = "",
+  actualOrganizer = "";
 function start() {
   for (var i = 1; i < 5; i++) {
     document.getElementById("img" + i).style.width = "0";
@@ -127,4 +127,25 @@ function animateButton() {
     window.location.href = "http://www.fatecsorocaba.edu.br/";
     window.location.assign("http://www.fatecsorocaba.edu.br/");
   }, 1000);
+}
+
+function showOrganizers() {
+  var button = document.getElementById("organizer__title");
+  button.className = "organization__title";
+  button.childNodes.item(1).className = "organization__title__text";
+  button.childNodes.item(3).className = "organization__title__arrow";
+  document
+    .getElementById("organizer__container")
+    .classList.add("organization__container--show");
+}
+
+function showOrganizer(index) {
+  if (actualOrganizer) {
+    document.getElementById("organizer" + actualOrganizer).className =
+      "organization__container__collapse";
+      
+  }
+  var collapse = document.getElementById("organizer" + index);
+  collapse.classList.add("organization__container__collapse--show");
+  actualOrganizer = index;
 }
