@@ -1,39 +1,14 @@
 "use strict";
 
 var photo = 0,
-  organizers = ["purple", "black", "blue", "red"],
-  organizer = 0,
   tabAtual = "monday",
   tabAreaAtual = "frontend",
   changingSlide = "",
   actualOrganizer = "";
+  
 function start() {
   for (var i = 1; i < 5; i++) {
     document.getElementById("img" + i).style.width = "0";
-  }
-}
-
-function nextOrganizer() {
-  if (organizer < organizers.length - 1) {
-    organizer += 1;
-    document.getElementById("organization").style.backgroundColor =
-      organizers[organizer];
-  } else {
-    organizer = 0;
-    document.getElementById("organization").style.backgroundColor =
-      organizers[organizer];
-  }
-}
-
-function previousOrganizer() {
-  if (organizer > 0) {
-    organizer -= 1;
-    document.getElementById("organization").style.backgroundColor =
-      organizers[organizer];
-  } else {
-    organizer = organizers.length - 1;
-    document.getElementById("organization").style.backgroundColor =
-      organizers[organizer];
   }
 }
 
@@ -143,7 +118,6 @@ function showOrganizer(index) {
   if (actualOrganizer) {
     document.getElementById("organizer" + actualOrganizer).className =
       "organization__container__collapse";
-      
   }
   var collapse = document.getElementById("organizer" + index);
   collapse.classList.add("organization__container__collapse--show");
