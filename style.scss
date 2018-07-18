@@ -116,6 +116,10 @@ body {
     color: white;
     text-transform: uppercase;
     text-align: center;
+
+    @include tablet {
+      font-size: 2em;
+    }
   }
 
   &__button {
@@ -130,6 +134,12 @@ body {
     background-position: -100%;
     background-size: 20px;
     background-repeat: no-repeat;
+
+    @include tablet {
+      width: 8em;
+      height: 1.5em;
+      font-size: 2em;
+    }
 
     &--active {
       background-position: 120%;
@@ -156,6 +166,11 @@ body {
     display: flex;
     flex-flow: column;
     z-index: 1;
+
+    @include tablet {
+      flex-flow: row;
+      justify-content: center;
+    }
 
     .container {
       display: flex;
@@ -213,12 +228,17 @@ body {
       justify-items: center;
       width: 90%;
       margin-top: 20px;
+      height: auto;
 
       &__avatar {
         border-radius: 100%;
-        width: 20%;
+        width: 4em;
         padding-right: 10px;
         padding-left: 10px;
+
+        @include tablet {
+          width: 8em;
+        }
       }
 
       &__text {
@@ -230,8 +250,8 @@ body {
         width: 100%;
 
         @include tablet {
-          padding-left: 20px;
           padding-right: 20px;
+          font-size: medium;
         }
 
         .name {
@@ -321,9 +341,13 @@ body {
 
       &__avatar {
         border-radius: 100%;
-        width: 20%;
+        width: 4em;
         padding-right: 10px;
         padding-left: 10px;
+
+        @include tablet {
+          width: 8em;
+        }
       }
 
       &__text {
@@ -335,8 +359,8 @@ body {
         width: 100%;
 
         @include tablet {
-          padding-left: 20px;
           padding-right: 20px;
+          font-size: medium;
         }
 
         .name {
@@ -394,16 +418,24 @@ body {
         left: 0;
         img {
           transform: rotate(180deg);
-          width: 20px;
-          height: 20px;
+          width: 1em;
+          height: auto;
+
+          @include tablet {
+            width: 2em;
+          }
         }
       }
 
       &--next {
         right: 0;
         img {
-          width: 20px;
-          height: 20px;
+          width: 1em;
+          height: auto;
+
+          @include tablet {
+            width: 2em;
+          }
         }
       }
     }
@@ -430,7 +462,7 @@ body {
     justify-items: center;
 
     @include tablet {
-      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-columns: repeat(4, 1fr);
     }
 
     img {
@@ -483,7 +515,7 @@ body {
       font-weight: bold;
     }
     &__arrow {
-      width: 10vw;
+      width: 2em;
       height: auto;
       transform: rotate(90deg);
     }
@@ -496,6 +528,11 @@ body {
     &--show {
       display: flex;
       flex-flow: column;
+
+      @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     &__organizer {
@@ -552,8 +589,12 @@ body {
         justify-content: space-between;
         margin: 0 5em;
         img {
-          width: 8vw;
+          width: 2em;
           height: auto;
+        }
+
+        @include tablet {
+          margin: 0 7em;
         }
       }
     }

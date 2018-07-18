@@ -67,6 +67,9 @@ body {
     color: white;
     text-transform: uppercase;
     text-align: center; }
+    @media (min-width: 768px) {
+      .call__title {
+        font-size: 2em; } }
   .call__button {
     border: 0;
     width: 10em;
@@ -79,6 +82,11 @@ body {
     background-position: -100%;
     background-size: 20px;
     background-repeat: no-repeat; }
+    @media (min-width: 768px) {
+      .call__button {
+        width: 8em;
+        height: 1.5em;
+        font-size: 2em; } }
     .call__button--active {
       background-position: 120%;
       transition: background-position 1s ease-in-out; }
@@ -99,6 +107,10 @@ body {
     display: flex;
     flex-flow: column;
     z-index: 1; }
+    @media (min-width: 768px) {
+      .speakers__tabs {
+        flex-flow: row;
+        justify-content: center; } }
     .speakers__tabs .container {
       display: flex;
       flex-flow: row;
@@ -145,12 +157,16 @@ body {
       align-content: center;
       justify-items: center;
       width: 90%;
-      margin-top: 20px; }
+      margin-top: 20px;
+      height: auto; }
       .speakers__container__speaker__avatar {
         border-radius: 100%;
-        width: 20%;
+        width: 4em;
         padding-right: 10px;
         padding-left: 10px; }
+        @media (min-width: 768px) {
+          .speakers__container__speaker__avatar {
+            width: 8em; } }
       .speakers__container__speaker__text {
         padding-right: 10px;
         display: flex;
@@ -160,8 +176,8 @@ body {
         width: 100%; }
         @media (min-width: 768px) {
           .speakers__container__speaker__text {
-            padding-left: 20px;
-            padding-right: 20px; } }
+            padding-right: 20px;
+            font-size: medium; } }
         .speakers__container__speaker__text .biography {
           display: none; }
 
@@ -226,9 +242,12 @@ body {
       width: 90%; }
       .instructors__container__instructor__avatar {
         border-radius: 100%;
-        width: 20%;
+        width: 4em;
         padding-right: 10px;
         padding-left: 10px; }
+        @media (min-width: 768px) {
+          .instructors__container__instructor__avatar {
+            width: 8em; } }
       .instructors__container__instructor__text {
         padding-right: 10px;
         display: flex;
@@ -238,8 +257,8 @@ body {
         width: 100%; }
         @media (min-width: 768px) {
           .instructors__container__instructor__text {
-            padding-left: 20px;
-            padding-right: 20px; } }
+            padding-right: 20px;
+            font-size: medium; } }
         .instructors__container__instructor__text .biography {
           display: none; }
 
@@ -275,13 +294,19 @@ body {
         left: 0; }
         .previous__gallery__button--previous img {
           transform: rotate(180deg);
-          width: 20px;
-          height: 20px; }
+          width: 1em;
+          height: auto; }
+          @media (min-width: 768px) {
+            .previous__gallery__button--previous img {
+              width: 2em; } }
       .previous__gallery__button--next {
         right: 0; }
         .previous__gallery__button--next img {
-          width: 20px;
-          height: 20px; }
+          width: 1em;
+          height: auto; }
+          @media (min-width: 768px) {
+            .previous__gallery__button--next img {
+              width: 2em; } }
 
 .sponsors {
   width: 100%;
@@ -301,7 +326,7 @@ body {
     justify-items: center; }
     @media (min-width: 768px) {
       .sponsors__content {
-        grid-template-columns: 33.33% 33.33% 33.33%; } }
+        grid-template-columns: repeat(4, 1fr); } }
     .sponsors__content img {
       width: 60%;
       margin-bottom: 10px; }
@@ -345,7 +370,7 @@ body {
       -webkit-margin-end: 0px;
       font-weight: bold; }
     .organization__button__arrow {
-      width: 10vw;
+      width: 2em;
       height: auto;
       transform: rotate(90deg); }
   .organization__container {
@@ -354,6 +379,10 @@ body {
     .organization__container--show {
       display: flex;
       flex-flow: column; }
+      @media (min-width: 768px) {
+        .organization__container--show {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); } }
     .organization__container__organizer {
       padding-bottom: 20px;
       display: flex;
@@ -396,8 +425,11 @@ body {
         justify-content: space-between;
         margin: 0 5em; }
         .organization__container__collapse__links img {
-          width: 8vw;
+          width: 2em;
           height: auto; }
+        @media (min-width: 768px) {
+          .organization__container__collapse__links {
+            margin: 0 7em; } }
 
 .footer {
   background-color: #9c27b0;
