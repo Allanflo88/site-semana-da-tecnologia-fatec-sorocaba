@@ -486,7 +486,6 @@ body {
 
   &__container {
     width: 100%;
-    margin-left: 10px;
     display: none;
 
     &--show {
@@ -499,7 +498,8 @@ body {
       display: flex;
       flex-flow: row;
       height: auto;
-      width: 100%;
+      width: 95%;
+      margin-left: 10px;
       &__avatar {
         border-radius: 100%;
         width: auto;
@@ -529,11 +529,13 @@ body {
       justify-content: center;
       height: 0;
       visibility: hidden;
+      text-align: justify;
+      margin-left: 20px;
+      margin-right: 20px;
 
       &--show {
         height: auto;
         visibility: visible;
-
       }
 
       &__text {
@@ -542,7 +544,8 @@ body {
       &__links {
         display: flex;
         flex-flow: row;
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0 5em;
         img {
           width: 8vw;
           height: auto;

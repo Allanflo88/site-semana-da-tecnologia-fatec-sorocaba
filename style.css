@@ -345,7 +345,6 @@ body {
       transform: rotate(90deg); }
   .organization__container {
     width: 100%;
-    margin-left: 10px;
     display: none; }
     .organization__container--show {
       display: flex;
@@ -355,7 +354,8 @@ body {
       display: flex;
       flex-flow: row;
       height: auto;
-      width: 100%; }
+      width: 95%;
+      margin-left: 10px; }
       .organization__container__organizer__avatar {
         border-radius: 100%;
         width: auto;
@@ -378,14 +378,18 @@ body {
       flex-flow: column;
       justify-content: center;
       height: 0;
-      visibility: hidden; }
+      visibility: hidden;
+      text-align: justify;
+      margin-left: 20px;
+      margin-right: 20px; }
       .organization__container__collapse--show {
         height: auto;
         visibility: visible; }
       .organization__container__collapse__links {
         display: flex;
         flex-flow: row;
-        justify-content: center; }
+        justify-content: space-between;
+        margin: 0 5em; }
         .organization__container__collapse__links img {
           width: 8vw;
           height: auto; }
