@@ -45,14 +45,17 @@ body {
   justify-content: center;
   align-items: center;
   &__title {
-    width: 80vw;
+    width: 8vw;
     align-items: center;
     display: flex;
     flex-flow: row;
     height: auto;
+    justify-content: center;
     img {
-      width: 100%;
+      width: auto;
       height: auto;
+      max-width: 80vw;
+      max-height: 80vh;
     }
 
     @include tablet {
