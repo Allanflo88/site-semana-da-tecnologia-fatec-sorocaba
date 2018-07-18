@@ -17,7 +17,7 @@ body {
     flex-flow: row;
     height: auto; }
     .header__title img {
-      width: 16em;
+      width: 100%;
       height: auto; }
     @media (min-width: 768px) {
       .header__title {
