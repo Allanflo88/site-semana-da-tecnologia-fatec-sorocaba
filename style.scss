@@ -174,7 +174,8 @@ body {
       background-position: center;
       height: 70px;
       padding: 0;
-      width: 30vw;
+      width: 80px;
+      margin: 0 10px;
 
       &--active {
         color: white;
@@ -278,8 +279,9 @@ body {
       background-position: center;
       height: 70px;
       padding: 0;
-      width: 30vw;
+      width: 80px;
       z-index: 1;
+      margin: 0 10px;
 
       &--active {
         color: white;

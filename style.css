@@ -115,7 +115,8 @@ body {
       background-position: center;
       height: 70px;
       padding: 0;
-      width: 30vw; }
+      width: 80px;
+      margin: 0 10px; }
       .speakers__tabs__tab--active {
         color: white;
         background-image: url("./images/full_hexagon.svg"); }
@@ -192,8 +193,9 @@ body {
       background-position: center;
       height: 70px;
       padding: 0;
-      width: 30vw;
-      z-index: 1; }
+      width: 80px;
+      z-index: 1;
+      margin: 0 10px; }
       .instructors__tabs__tab--active {
         color: white;
         background-image: url("./images/full_hexagon.svg"); }
