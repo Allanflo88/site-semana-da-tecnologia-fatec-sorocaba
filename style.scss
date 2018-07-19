@@ -554,8 +554,13 @@ body {
 
         img {
           transform: rotate(90deg);
-          width: 5vw;
+          width: 1em;
           height: auto;
+
+        }
+
+        @include tablet{
+          width: 100%;
         }
       }
     }

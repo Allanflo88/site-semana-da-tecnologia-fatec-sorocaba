@@ -397,8 +397,11 @@ body {
         width: 70%; }
         .organization__container__organizer__text img {
           transform: rotate(90deg);
-          width: 5vw;
+          width: 1em;
           height: auto; }
+        @media (min-width: 768px) {
+          .organization__container__organizer__text {
+            width: 100%; } }
     .organization__container__collapse {
       display: flex;
       flex-flow: column;
