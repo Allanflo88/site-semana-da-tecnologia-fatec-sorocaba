@@ -123,10 +123,24 @@ function interactOrganizers(){
 
 function showOrganizer(organizer) {
   organizer.classList.add("organization__container__collapse--show");
+  organizer.childNodes.item(1).classList.add("organization__container__collapse__text--active");
+  organizer.childNodes.item(3).classList.add("organization__container__collapse__links--active");
+  organizer.childNodes.item(3).childNodes.forEach((elem) => {
+      if(elem.localName == "a"){
+        elem.childNodes.item(1).classList.add("organization__container__collapse__links__img--active");
+      }
+  });
 }
 
 function closeOrganizer(organizer){
   organizer.classList.remove("organization__container__collapse--show");
+  organizer.childNodes.item(1).classList.remove("organization__container__collapse__text--active");
+  organizer.childNodes.item(3).classList.remove("organization__container__collapse__links--active");
+  organizer.childNodes.item(3).childNodes.forEach((elem) => {
+      if(elem.localName == "a"){
+        elem.childNodes.item(1).classList.remove("organization__container__collapse__links__img--active");
+      }
+  });
 }
 
 function interactOrganizer(index){

@@ -560,17 +560,28 @@ body {
       flex-flow: column;
       justify-content: center;
       height: 0;
-      visibility: hidden;
       text-align: justify;
       margin-left: 20px;
       margin-right: 20px;
+      opacity: 0;
 
       &--show {
         height: auto;
-        visibility: visible;
+        transition: opacity .2s ease-in;
+        opacity: 1;
       }
 
       &__text {
+        height: 0;
+        font-size: 0;
+        opacity: 0;
+
+        &--active{
+          height: auto;
+          font-size: medium;
+          opacity: 1;
+          transition: opacity .2s ease-in;
+        }
       }
 
       &__links {
@@ -578,9 +589,24 @@ body {
         flex-flow: row;
         justify-content: space-between;
         margin: 0 5em;
-        img {
-          width: 2em;
+        height: 0;
+        opacity: 0;
+        &__img {
+          width: auto;
+          height: 0;
+          opacity: 0;
+
+          &--active{
+            height: 2em;
+            transition: opacity .2s ease-in;
+            opacity: 1;
+          }
+        }
+
+        &--active {
           height: auto;
+          transition: opacity .2s ease-in;
+          opacity: 1;
         }
 
         @include tablet {
