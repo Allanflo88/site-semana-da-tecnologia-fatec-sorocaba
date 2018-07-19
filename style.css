@@ -327,9 +327,12 @@ body {
     @media (min-width: 768px) {
       .sponsors__content {
         grid-template-columns: repeat(4, 1fr); } }
-    .sponsors__content img {
+    .sponsors__content__img {
       width: 60%;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      transition: width 1s ease-in-out; }
+      .sponsors__content__img:hover {
+        width: 80%; }
 
 .organization {
   width: 100%;

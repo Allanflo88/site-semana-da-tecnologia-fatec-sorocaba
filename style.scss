@@ -465,9 +465,13 @@ body {
       grid-template-columns: repeat(4, 1fr);
     }
 
-    img {
+    &__img {
       width: 60%;
       margin-bottom: 10px;
+      transition: width 1s ease-in-out;
+      &:hover {
+        width: 80%
+      }
     }
   }
 }
