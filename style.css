@@ -418,7 +418,8 @@ body {
         padding-right: 10px;
         padding-left: 10px;
         width: 3.5em;
-        object-fit: cover; }
+        object-fit: cover;
+        object-position: top; }
       .organization__container__organizer__text {
         font-weight: bold;
         display: flex;
