@@ -35,6 +35,9 @@ $desktop-large-width: 1025px;
 body {
   margin: 0;
   font-family: sans-serif;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 .header {
   background-color: $primary-color;
@@ -62,6 +65,10 @@ body {
       font-size: x-large;
     }
   }
+
+  @include desktop {
+    height: 100vh;
+  }
 }
 .introduction {
   display: flex;
@@ -85,6 +92,7 @@ body {
 
   &__text {
     text-align: justify;
+    width: fit-content;
 
     a {
       font-weight: bold;
@@ -97,9 +105,10 @@ body {
       }
     }
 
-    @include tablet {
-      width: 60%;
-    }
+  }
+  
+  @include desktop {
+    width: 60%;
   }
 }
 .call {
@@ -266,6 +275,9 @@ body {
       }
     }
   }
+  @include desktop {
+    width: 60%;
+  }
 }
 .instructors {
   width: 100%;
@@ -368,6 +380,9 @@ body {
       }
     }
   }
+  @include desktop {
+    width: 60%;
+  }
 }
 .previous {
   width: 100%;
@@ -387,10 +402,19 @@ body {
     justify-content: center;
     overflow: hidden;
 
-    &__image {
-      width: 75%;
+    @include tablet {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20%;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      justify-items: center;
       height: auto;
-      background-color: white;
+      background-color: transparent;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
       transition: 1s ease-out;
 
       &--left {
@@ -431,7 +455,14 @@ body {
           }
         }
       }
+
+      @include tablet {
+        display: none;
+      }
     }
+  }
+  @include desktop {
+    width: 60%;
   }
 }
 .sponsors {
@@ -463,9 +494,12 @@ body {
       margin-bottom: 10px;
       transition: width 1s ease-in-out;
       &:hover {
-        width: 80%
+        width: 80%;
       }
     }
+  }
+  @include desktop {
+    width: 60%;
   }
 }
 .organization {
@@ -496,7 +530,7 @@ body {
       width: 2em;
       height: auto;
       transform: rotate(90deg);
-      transition: transform .2s ease-in;
+      transition: transform 0.2s ease-in;
 
       &--active {
         transform: rotate(270deg);
@@ -539,8 +573,8 @@ body {
         &--diff {
           width: 3.5em;
 
-          @include tablet{
-            width: 4em;
+          @include tablet {
+            width: 3.5em;
           }
         }
       }
@@ -557,10 +591,9 @@ body {
           transform: rotate(90deg);
           width: 1em;
           height: auto;
-
         }
 
-        @include tablet{
+        @include tablet {
           width: 100%;
         }
       }
@@ -577,7 +610,7 @@ body {
 
       &--show {
         height: auto;
-        transition: opacity .2s ease-in;
+        transition: opacity 0.2s ease-in;
         opacity: 1;
       }
 
@@ -586,11 +619,11 @@ body {
         font-size: 0;
         opacity: 0;
 
-        &--active{
+        &--active {
           height: auto;
           font-size: medium;
           opacity: 1;
-          transition: opacity .2s ease-in;
+          transition: opacity 0.2s ease-in;
         }
       }
 
@@ -606,16 +639,16 @@ body {
           height: 0;
           opacity: 0;
 
-          &--active{
+          &--active {
             height: 2em;
-            transition: opacity .2s ease-in;
+            transition: opacity 0.2s ease-in;
             opacity: 1;
           }
         }
 
         &--active {
           height: auto;
-          transition: opacity .2s ease-in;
+          transition: opacity 0.2s ease-in;
           opacity: 1;
         }
 
@@ -624,6 +657,9 @@ body {
         }
       }
     }
+  }
+  @include desktop {
+    width: 60%;
   }
 }
 .footer {

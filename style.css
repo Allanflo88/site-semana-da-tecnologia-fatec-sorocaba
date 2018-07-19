@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
 
 .header {
   background-color: #9c27b0;
@@ -25,6 +28,9 @@ body {
     @media (min-width: 768px) {
       .header__title {
         font-size: x-large; } }
+  @media (min-width: 1024px) {
+    .header {
+      height: 100vh; } }
 
 .introduction {
   display: flex;
@@ -42,7 +48,8 @@ body {
       .introduction__title {
         width: 30%; } }
   .introduction__text {
-    text-align: justify; }
+    text-align: justify;
+    width: fit-content; }
     .introduction__text a {
       font-weight: bold;
       background-color: #9c27b0;
@@ -50,9 +57,9 @@ body {
       text-decoration: none; }
       .introduction__text a:hover {
         color: #b2ff59; }
-    @media (min-width: 768px) {
-      .introduction__text {
-        width: 60%; } }
+  @media (min-width: 1024px) {
+    .introduction {
+      width: 60%; } }
 
 .call {
   background-color: #270327;
@@ -180,6 +187,9 @@ body {
             font-size: medium; } }
         .speakers__container__speaker__text .biography {
           display: none; }
+  @media (min-width: 1024px) {
+    .speakers {
+      width: 60%; } }
 
 .instructors {
   width: 100%;
@@ -261,6 +271,9 @@ body {
             font-size: medium; } }
         .instructors__container__instructor__text__biography {
           display: none; }
+  @media (min-width: 1024px) {
+    .instructors {
+      width: 60%; } }
 
 .previous {
   width: 100%; }
@@ -276,10 +289,18 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden; }
+    @media (min-width: 768px) {
+      .previous__gallery {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        justify-items: center;
+        height: auto;
+        background-color: transparent; } }
     .previous__gallery__image {
-      width: 75%;
+      width: 100%;
       height: auto;
-      background-color: white;
       transition: 1s ease-out; }
       .previous__gallery__image--left {
         width: 0;
@@ -307,6 +328,12 @@ body {
           @media (min-width: 768px) {
             .previous__gallery__button--next img {
               width: 2em; } }
+      @media (min-width: 768px) {
+        .previous__gallery__button {
+          display: none; } }
+  @media (min-width: 1024px) {
+    .previous {
+      width: 60%; } }
 
 .sponsors {
   width: 100%;
@@ -333,6 +360,9 @@ body {
       transition: width 1s ease-in-out; }
       .sponsors__content__img:hover {
         width: 80%; }
+  @media (min-width: 1024px) {
+    .sponsors {
+      width: 60%; } }
 
 .organization {
   width: 100%;
@@ -360,7 +390,7 @@ body {
       width: 2em;
       height: auto;
       transform: rotate(90deg);
-      transition: transform .2s ease-in; }
+      transition: transform 0.2s ease-in; }
       .organization__button__arrow--active {
         transform: rotate(270deg); }
     .organization__button--active {
@@ -392,7 +422,7 @@ body {
           width: 3.5em; }
           @media (min-width: 768px) {
             .organization__container__organizer__avatar--diff {
-              width: 4em; } }
+              width: 3.5em; } }
       .organization__container__organizer__text {
         font-weight: bold;
         display: flex;
@@ -418,7 +448,7 @@ body {
       opacity: 0; }
       .organization__container__collapse--show {
         height: auto;
-        transition: opacity .2s ease-in;
+        transition: opacity 0.2s ease-in;
         opacity: 1; }
       .organization__container__collapse__text {
         height: 0;
@@ -428,7 +458,7 @@ body {
           height: auto;
           font-size: medium;
           opacity: 1;
-          transition: opacity .2s ease-in; }
+          transition: opacity 0.2s ease-in; }
       .organization__container__collapse__links {
         display: flex;
         flex-flow: row;
@@ -442,15 +472,18 @@ body {
           opacity: 0; }
           .organization__container__collapse__links__img--active {
             height: 2em;
-            transition: opacity .2s ease-in;
+            transition: opacity 0.2s ease-in;
             opacity: 1; }
         .organization__container__collapse__links--active {
           height: auto;
-          transition: opacity .2s ease-in;
+          transition: opacity 0.2s ease-in;
           opacity: 1; }
         @media (min-width: 768px) {
           .organization__container__collapse__links {
             margin: 0 7em; } }
+  @media (min-width: 1024px) {
+    .organization {
+      width: 60%; } }
 
 .footer {
   background-color: #9c27b0;

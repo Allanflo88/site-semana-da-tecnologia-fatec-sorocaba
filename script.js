@@ -8,17 +8,24 @@ var photo = 0,
   isShownOrganizers = false;
 
 function start() {
-  for (var i = 1; i < 5; i++) {
-    document.getElementById("img" + i).style.width = "0";
+  if(window.innerWidth < 1024){
+    for (var i = 1; i < 6; i++) {
+      document.getElementById("img" + i).style.width = "0";
+    }
+  }
+  else{
+    for (var i = 1; i < 6; i++) {
+      document.getElementById("img" + i).className = "previous__gallery__image";
+    }
   }
 }
 
 function nextPhoto() {
-  if (photo < 4) {
+  if (photo < 5) {
     document.getElementById("img" + photo).className =
       "previous__gallery__image previous__gallery__image--left";
     photo += 1;
-    document.getElementById("img" + photo).style.width = "75%";
+    document.getElementById("img" + photo).style.width = "16em";
     document.getElementById("img" + photo).className =
       "previous__gallery__image";
     document.getElementById("img" + (photo - 1)).style.width = "0";
@@ -29,7 +36,7 @@ function previousPhoto() {
     document.getElementById("img" + photo).className =
       "previous__gallery__image previous__gallery__image--right";
     photo -= 1;
-    document.getElementById("img" + photo).style.width = "75%";
+    document.getElementById("img" + photo).style.width = "16em";
     document.getElementById("img" + photo).className =
       "previous__gallery__image";
     document.getElementById("img" + (photo + 1)).style.width = "0";
