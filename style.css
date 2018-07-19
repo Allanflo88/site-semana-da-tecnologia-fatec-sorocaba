@@ -334,22 +334,6 @@ body {
 .organization {
   width: 100%;
   margin-bottom: 30px; }
-  .organization__title {
-    flex-flow: column;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-    display: flex; }
-    .organization__title__text {
-      display: block;
-      font-size: 1.5em;
-      -webkit-margin-before: 0.83em;
-      -webkit-margin-after: 0.83em;
-      -webkit-margin-start: 0px;
-      -webkit-margin-end: 0px;
-      font-weight: bold; }
-    .organization__title__arrow {
-      display: none; }
   .organization__button {
     flex-flow: column;
     align-items: center;
@@ -372,7 +356,12 @@ body {
     .organization__button__arrow {
       width: 2em;
       height: auto;
-      transform: rotate(90deg); }
+      transform: rotate(90deg);
+      transition: transform .2s ease-in; }
+      .organization__button__arrow--active {
+        transform: rotate(270deg); }
+    .organization__button--active {
+      margin-bottom: 30px; }
   .organization__container {
     width: 100%;
     display: none; }

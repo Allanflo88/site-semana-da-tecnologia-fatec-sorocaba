@@ -474,25 +474,6 @@ body {
 .organization {
   width: 100%;
   margin-bottom: 30px;
-  &__title {
-    flex-flow: column;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-    display: flex;
-    &__text {
-      display: block;
-      font-size: 1.5em;
-      -webkit-margin-before: 0.83em;
-      -webkit-margin-after: 0.83em;
-      -webkit-margin-start: 0px;
-      -webkit-margin-end: 0px;
-      font-weight: bold;
-    }
-    &__arrow {
-      display: none;
-    }
-  }
   &__button {
     flex-flow: column;
     align-items: center;
@@ -518,6 +499,15 @@ body {
       width: 2em;
       height: auto;
       transform: rotate(90deg);
+      transition: transform .2s ease-in;
+
+      &--active {
+        transform: rotate(270deg);
+      }
+    }
+
+    &--active {
+      margin-bottom: 30px;
     }
   }
 

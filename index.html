@@ -23,7 +23,7 @@
         <div class="introduction__text">
             <p>
                 A Semana de Tecnologia é um evento organizado de
-                <a href="#organizers" onclick="showOrganizers()">alunos</a> para alunos do curso de Análise e Desenvolvimento de Sistemas da Fatec Sorocaba. Ele oferece gratuitamente
+                <a href="#organizers" onclick="interactOrganizers()">alunos</a> para alunos do curso de Análise e Desenvolvimento de Sistemas da Fatec Sorocaba. Ele oferece gratuitamente
                 o acesso a minicursos, palestras e a grande oportunidade de conhecer pessoas que já atuam no mercado de trabalho
             </p>
         </div>
@@ -459,11 +459,11 @@
         </div>
     </section>
     <section id="organizers" class="organization">
-        <div id="organizer__title" class="organization__button" onclick="showOrganizers()">
+        <div id="organizer__title" class="organization__button" onclick="interactOrganizers()">
             <div class="organization__button__text">
                 Organização
             </div>
-            <img class="organization__button__arrow" src="./images/arrow-purple.svg">
+            <img id="organization__arrow" class="organization__button__arrow" src="./images/arrow-purple.svg">
         </div>
         <div id="organizer__container" class="organization__container">
             <div>
@@ -471,7 +471,7 @@
                     <img src="./images/organizers/airton.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">
                         Airton Marcelo Brasil
-                        <img src="./images/arrow.svg" onclick="showOrganizer(1)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(1)">
                     </div>
 
                 </div>
@@ -503,7 +503,7 @@
                     <img src="./images/organizers/alex.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">
                         Alex
-                        <img src="./images/arrow.svg" onclick="showOrganizer(2)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(2)">
                     </div>
 
                 </div>
@@ -535,7 +535,7 @@
                     <img src="./images/organizers/allan.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">
                         Allan Flores de Jesus
-                        <img src="./images/arrow.svg" onclick="showOrganizer(3)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(3)">
                     </div>
                 </div>
                 <div id="organizer3" class="organization__container__collapse">
@@ -565,7 +565,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/andre.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">André
-                        <img src="./images/arrow.svg" onclick="showOrganizer(4)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(4)">
 
                     </div>
                 </div>
@@ -596,7 +596,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/angelino.jpg" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Angelino
-                        <img src="./images/arrow.svg" onclick="showOrganizer(5)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(5)">
 
                     </div>
                 </div>
@@ -627,7 +627,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/barbara.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Bárbara Sajo
-                        <img src="./images/arrow.svg" onclick="showOrganizer(6)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(6)">
                     </div>
                 </div>
                 <div id="organizer6" class="organization__container__collapse">
@@ -657,7 +657,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/bia.jpg" alt="" class="organization__container__organizer__avatar" style="width: 17.7vw;">
                     <div class="organization__container__organizer__text">Beatriz
-                        <img src="./images/arrow.svg" onclick="showOrganizer(7)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(7)">
 
                     </div>
                 </div>
@@ -688,7 +688,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/christian.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Christian
-                        <img src="./images/arrow.svg" onclick="showOrganizer(8)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(8)">
 
                     </div>
                 </div>
@@ -719,7 +719,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/eduardo.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Eduardo Son
-                        <img src="./images/arrow.svg" onclick="showOrganizer(9)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(9)">
 
                     </div>
                 </div>
@@ -750,7 +750,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/elet.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Élet
-                        <img src="./images/arrow.svg" onclick="showOrganizer(10)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(10)">
 
                     </div>
                 </div>
@@ -781,7 +781,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/felipe.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Felipe Bernardes
-                        <img src="./images/arrow.svg" onclick="showOrganizer(11)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(11)">
 
                     </div>
                 </div>
@@ -812,7 +812,7 @@
                 <div class="organization__container__organizer">
                     <img src="./images/organizers/guiS.jpg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Guilherme Sernajoto
-                        <img src="./images/arrow.svg" onclick="showOrganizer(12)">
+                        <img src="./images/arrow.svg" onclick="interactOrganizer(12)">
                     </div>
                 </div>
                 <div id="organizer12" class="organization__container__collapse">

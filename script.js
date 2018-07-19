@@ -4,7 +4,8 @@ var photo = 0,
   tabAtual = "monday",
   tabAreaAtual = "frontend",
   changingSlide = 0,
-  actualOrganizer = "";
+  actualOrganizer = "",
+  isShownOrganizers = false;
 
 function start() {
   for (var i = 1; i < 5; i++) {
@@ -91,22 +92,57 @@ function animateButton() {
   }, 1000);
 }
 
-function showOrganizers() {
-  var button = document.getElementById("organizer__title");
-  button.className = "organization__title";
-  button.childNodes.item(1).className = "organization__title__text";
-  button.childNodes.item(3).className = "organization__title__arrow";
-  document
-    .getElementById("organizer__container")
-    .classList.add("organization__container--show");
+function showOrganizers(container, title, arrow) {
+  container.classList.add("organization__container--show");
+  title.classList.add("organization__button--active");
+  arrow.classList.add("organization__button__arrow--active");
+  
 }
 
-function showOrganizer(index) {
-  if (actualOrganizer) {
-    document.getElementById("organizer" + actualOrganizer).className =
-      "organization__container__collapse";
+function closeOrganizers(container, title, arrow) {
+  container.classList.remove("organization__container--show");
+  title.classList.remove("organization__button--active");
+  arrow.classList.remove("organization__button__arrow--active");
+  
+}
+
+function interactOrganizers(){
+  var container = document.getElementById("organizer__container");
+  var title = document.getElementById("organizer__title");
+  var arrow = document.getElementById("organization__arrow");
+
+  if(!isShownOrganizers){
+    showOrganizers(container, title, arrow);
+    isShownOrganizers = true
   }
-  var collapse = document.getElementById("organizer" + index);
-  collapse.classList.add("organization__container__collapse--show");
-  actualOrganizer = index;
+  else{
+    closeOrganizers(container, title, arrow);
+    isShownOrganizers = false;
+  }
+}
+
+function showOrganizer(organizer) {
+  organizer.classList.add("organization__container__collapse--show");
+}
+
+function closeOrganizer(organizer){
+  organizer.classList.remove("organization__container__collapse--show");
+}
+
+function interactOrganizer(index){
+  var organizer = document.getElementById("organizer" + index);
+  if (actualOrganizer) {
+    closeOrganizer(document.getElementById("organizer" + actualOrganizer));
+    if(actualOrganizer != index){
+      showOrganizer(organizer);
+      actualOrganizer = index;
+      return;
+    }
+    actualOrganizer = "";
+    
+  }
+  else{
+    showOrganizer(organizer);
+    actualOrganizer = index;
+  }
 }
