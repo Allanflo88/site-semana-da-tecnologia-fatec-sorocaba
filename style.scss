@@ -565,18 +565,11 @@ body {
       margin-left: 10px;
       &__avatar {
         border-radius: 100%;
-        width: auto;
         height: 3.5em;
         padding-right: 10px;
         padding-left: 10px;
-
-        &--diff {
-          width: 3.5em;
-
-          @include tablet {
-            width: 3.5em;
-          }
-        }
+        width: 3.5em;
+        object-fit: cover;
       }
 
       &__text {

@@ -414,15 +414,11 @@ body {
       margin-left: 10px; }
       .organization__container__organizer__avatar {
         border-radius: 100%;
-        width: auto;
         height: 3.5em;
         padding-right: 10px;
-        padding-left: 10px; }
-        .organization__container__organizer__avatar--diff {
-          width: 3.5em; }
-          @media (min-width: 768px) {
-            .organization__container__organizer__avatar--diff {
-              width: 3.5em; } }
+        padding-left: 10px;
+        width: 3.5em;
+        object-fit: cover; }
       .organization__container__organizer__text {
         font-weight: bold;
         display: flex;
