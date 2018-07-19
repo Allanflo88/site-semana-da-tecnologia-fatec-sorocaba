@@ -36,49 +36,36 @@ function previousPhoto() {
   }
 }
 function changeTab(tab) {
+  const container = "speakers__container";
+  const active = " speakers__container--active";
+  const btn = "speakers__tabs__tab";
+
   var week = ["monday", "tuesday", "wednesday", "thursday", "friday"];
   var containers = document.getElementsByClassName("speakers__container");
-  var containerAtual = document.getElementsByClassName(
-    "speakers__container speakers__container--active"
-  );
+  var containerAtual = document.getElementsByClassName(container + active);
+  var tabs = document.getElementsByClassName(tab + " speakers__tabs__tab--active");
 
-  containerAtual.namedItem(tabAtual + "__container").className =
-    "speakers__container";
-  containers.namedItem(week[tab] + "__container").className =
-    "speakers__container speakers__container--active";
+  containerAtual.namedItem(tabAtual + "__container").className = container;
+  containers.namedItem(week[tab] + "__container").className = container + active;
 
-  var tabs = document.getElementsByClassName(
-    "speakers__tabs__tab speakers__tabs__tab--active"
-  );
-  tabs.item(0).className = "speakers__tabs__tab";
-  document.getElementById(tabAtual + "__button").className =
-    "speakers__tabs__tab";
-  document.getElementById(week[tab] + "__button").className =
-    "speakers__tabs__tab speakers__tabs__tab--active";
+  document.getElementById(tabAtual + "__button").className = btn;
+  document.getElementById(week[tab] + "__button").className = btn + " speakers__tabs__tab--active";
   tabAtual = week[tab];
 }
 
 function changeTabArea(tab) {
+  const container = "instructors__container";
+  const active = " instructors__container--active";
+  const btn = "instructors__tabs__tab";
+
   var areas = ["frontend", "backend"];
   var containers = document.getElementsByClassName("instructors__container");
-  var containerAtual = document.getElementsByClassName(
-    "instructors__container instructors__container--active"
-  );
+  var containerAtual = document.getElementsByClassName(container + active);
 
-  containerAtual.namedItem(tabAreaAtual + "__container").className =
-    "instructors__container";
-  containers.namedItem(areas[tab] + "__container").className =
-    "instructors__container instructors__container--active";
-
-  var tabs = document.getElementsByClassName(
-    "instructors__tabs__tab instructors__tabs__tab--active"
-  );
-  tabs.item(0).className = "speakers__tabs__tab";
-  document.getElementById(tabAreaAtual + "__button").className =
-    "instructors__tabs__tab";
-  document.getElementById(areas[tab] + "__button").className =
-    "instructors__tabs__tab instructors__tabs__tab--active";
-
+  containerAtual.namedItem(tabAreaAtual + "__container").className = container;
+  containers.namedItem(areas[tab] + "__container").className = container + active;
+  document.getElementById(tabAreaAtual + "__button").className = btn;
+  document.getElementById(areas[tab] + "__button").className = btn + " instructors__tabs__tab--active";
   tabAreaAtual = areas[tab];
 }
 

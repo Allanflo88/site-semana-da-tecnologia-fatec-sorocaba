@@ -259,7 +259,7 @@ body {
           .instructors__container__instructor__text {
             padding-right: 20px;
             font-size: medium; } }
-        .instructors__container__instructor__text .biography {
+        .instructors__container__instructor__text__biography {
           display: none; }
 
 .previous {
