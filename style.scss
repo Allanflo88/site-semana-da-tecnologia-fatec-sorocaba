@@ -539,9 +539,17 @@ body {
       &__avatar {
         border-radius: 100%;
         width: auto;
-        height: 10vh;
+        height: 3.5em;
         padding-right: 10px;
         padding-left: 10px;
+
+        &--diff {
+          width: 3.5em;
+
+          @include tablet{
+            width: 4em;
+          }
+        }
       }
 
       &__text {

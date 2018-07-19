@@ -388,6 +388,8 @@ body {
         height: 10vh;
         padding-right: 10px;
         padding-left: 10px; }
+        .organization__container__organizer__avatar--diff {
+          width: 17.4vw; }
       .organization__container__organizer__text {
         font-weight: bold;
         display: flex;
