@@ -91,13 +91,12 @@ body {
     width: 10em;
     height: 2em;
     background-color: white;
-    color: #270327;
     font-weight: bold;
-    text-transform: uppercase;
-    background-image: url("./images/dblArrow.svg");
-    background-position: -100%;
-    background-size: 20px;
-    background-repeat: no-repeat; }
+    text-transform: uppercase; }
+    .call__button a {
+      color: #270327; }
+      .call__button a:link {
+        text-decoration: none; }
     @media (min-width: 768px) {
       .call__button {
         width: 8em;

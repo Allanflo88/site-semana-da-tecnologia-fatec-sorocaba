@@ -75,17 +75,6 @@ function changeTabArea(tab) {
   tabAreaAtual = areas[tab];
 }
 
-function animateButton() {
-  const btn = " call__button";
-  var button = document.getElementById(btn.trim());
-  button.className = btn + btn + "--active";
-  button.innerText = "";
-  setTimeout(() => {
-    window.location.href = "http://www.fatecsorocaba.edu.br/";
-    window.location.assign("http://www.fatecsorocaba.edu.br/");
-  }, 1000);
-}
-
 function showOrganizers(container, title, arrow) {
   container.classList.add(orgContainer + "--show");
   title.classList.add(orgButton + active);

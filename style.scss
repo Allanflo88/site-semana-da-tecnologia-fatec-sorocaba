@@ -145,13 +145,15 @@ body {
     width: 10em;
     height: 2em;
     background-color: white;
-    color: #270327;
     font-weight: bold;
     text-transform: uppercase;
-    background-image: url("./images/dblArrow.svg");
-    background-position: -100%;
-    background-size: 20px;
-    background-repeat: no-repeat;
+
+    a {
+      color: $primary-dark;
+      &:link {
+        text-decoration: none;
+      }
+    }
 
     @include tablet {
       width: 8em;
