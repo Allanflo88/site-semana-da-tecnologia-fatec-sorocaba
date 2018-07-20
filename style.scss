@@ -501,6 +501,16 @@ body {
 
       @include tablet{
         width: 100%;
+        transition: .5s ease-out;
+      }
+
+      &:hover{
+        @include tablet{
+          width: 17em;
+          z-index: 1;
+
+        }
+  
       }
     }
 

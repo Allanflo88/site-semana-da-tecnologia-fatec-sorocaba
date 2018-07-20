@@ -374,7 +374,12 @@ body {
         transform: translateX(100%); }
       @media (min-width: 768px) {
         .previous__gallery__image {
-          width: 100%; } }
+          width: 100%;
+          transition: .5s ease-out; } }
+      @media (min-width: 768px) {
+        .previous__gallery__image:hover {
+          width: 17em;
+          z-index: 1; } }
     .previous__gallery__button {
       position: absolute;
       z-index: 1; }
