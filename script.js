@@ -19,15 +19,15 @@ const tamImg = "16em",
 
 function start() {
   if (window.innerWidth < 768) {
-    var elements = document.querySelectorAll("."+ gallery + "--right");
+    var elements = document.querySelectorAll("."+ (gallery.trim()) + "--right");
     elements.forEach((e)=>{
       e.style.width = "0";
     });
   }
   else {
-    var elements = document.querySelectorAll("."+ gallery);
+    var elements = document.querySelectorAll("."+ gallery.trim());
     elements.forEach((e)=>{
-      e.classList.remove(gallery + "--right");
+      e.classList.remove((gallery.trim()) + "--right");
     });
   }
 }
