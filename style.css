@@ -205,11 +205,10 @@ body {
           .speakers__container__speaker__text {
             padding-right: 0;
             font-size: medium;
-            text-align: center;
             align-items: center; } }
         @media (min-width: 768px) {
           .speakers__container__speaker__text__name {
-            padding-top: 20px;
+            padding-top: 10px;
             font-size: larger; } }
         .speakers__container__speaker__text__biography {
           display: none; }
@@ -291,7 +290,6 @@ body {
       align-content: center;
       justify-items: center;
       width: 90%;
-      margin-top: 20px;
       height: auto; }
       @media (min-width: 768px) {
         .instructors__container__instructor {
@@ -320,11 +318,10 @@ body {
           .instructors__container__instructor__text {
             padding-right: 0;
             font-size: medium;
-            text-align: center;
             align-items: center; } }
         @media (min-width: 768px) {
           .instructors__container__instructor__text__name {
-            padding-top: 20px;
+            padding-top: 10px;
             font-size: larger; } }
         .instructors__container__instructor__text__biography {
           display: none; }

@@ -283,14 +283,12 @@ body {
         @include tablet {
           padding-right: 0;
           font-size: medium;
-          text-align: center;
           align-items: center;
         }
 
         &__name {
           @include tablet {
-            padding-top: 20px;
-
+            padding-top: 10px;
             font-size: larger;
           }
         }
@@ -394,7 +392,6 @@ body {
       align-content: center;
       justify-items: center;
       width: 90%;
-      margin-top: 20px;
       height: auto;
 
       @include tablet {
@@ -428,14 +425,12 @@ body {
         @include tablet {
           padding-right: 0;
           font-size: medium;
-          text-align: center;
           align-items: center;
         }
 
         &__name {
           @include tablet {
-            padding-top: 20px;
-
+            padding-top: 10px;
             font-size: larger;
           }
         }
