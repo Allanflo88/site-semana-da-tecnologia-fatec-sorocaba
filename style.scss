@@ -86,13 +86,19 @@ body {
     text-align: center;
 
     @include tablet {
-      width: 30%;
+      width: 20%;
+      text-align: start;
+      padding-left: 3em;
     }
   }
 
   &__text {
     text-align: justify;
     width: fit-content;
+
+    @include tablet{
+      width: 70%;
+    }
 
     a {
       font-weight: bold;
@@ -104,6 +110,9 @@ body {
         color: $primary-green;
       }
     }
+  }
+  @include tablet{
+    margin-top: 2em;
   }
 
   @include desktop {
@@ -178,6 +187,7 @@ body {
     @include tablet {
       flex-flow: row;
       justify-content: center;
+      margin-top: 2em;
     }
 
     .container {
@@ -226,6 +236,10 @@ body {
       height: 100%;
       opacity: 1;
       transition: opacity 0.5s ease-in;
+
+      @include tablet{
+        margin-top: 2em;
+      }
     }
 
     &__speaker {
@@ -242,7 +256,6 @@ body {
         flex-flow: column;
         align-items: center;
         width: 100%;
-        margin-top: 30px;
       }
 
       &__avatar {
@@ -295,6 +308,9 @@ body {
       }
     }
   }
+  @include tablet{
+    margin-top: 2em;
+  }
   @include desktop {
     width: 60%;
   }
@@ -318,6 +334,10 @@ body {
     display: flex;
     flex-flow: row;
     justify-content: center;
+
+    @include tablet{
+      margin-top: 2em;
+    }
 
     &__tab {
       border-radius: 0;
@@ -361,6 +381,10 @@ body {
       height: 100%;
       opacity: 1;
       transition: opacity 0.5s ease-in;
+
+      @include tablet{
+        margin-top: 2em;
+      }
     }
 
     &__instructor {
@@ -377,7 +401,6 @@ body {
         flex-flow: column;
         align-items: center;
         width: 100%;
-        margin-top: 30px;
       }
 
       &__avatar {
@@ -430,6 +453,9 @@ body {
       }
     }
   }
+  @include tablet{
+    margin-top: 2em;
+  }
   @include desktop {
     width: 60%;
   }
@@ -460,6 +486,7 @@ body {
       justify-items: center;
       height: auto;
       background-color: transparent;
+      margin-top: 2em;
     }
 
     &__image {
@@ -511,6 +538,9 @@ body {
       }
     }
   }
+  @include tablet{
+    margin-top: 2em;
+  }
   @include desktop {
     width: 60%;
   }
@@ -537,6 +567,7 @@ body {
 
     @include tablet {
       grid-template-columns: repeat(4, 1fr);
+      margin-top: 2em;
     }
 
     &__img {
@@ -547,6 +578,9 @@ body {
         width: 80%;
       }
     }
+  }
+  @include tablet{
+    margin-top: 2em;
   }
   @include desktop {
     width: 60%;
@@ -603,6 +637,7 @@ body {
       @include tablet {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 2em;
       }
     }
 
@@ -701,6 +736,9 @@ body {
         }
       }
     }
+  }
+  @include tablet{
+    margin-top: 2em;
   }
   @include desktop {
     width: 60%;
