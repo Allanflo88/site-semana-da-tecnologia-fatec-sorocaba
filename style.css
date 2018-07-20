@@ -428,14 +428,22 @@ body {
     justify-items: center; }
     @media (min-width: 768px) {
       .sponsors__content {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 20% 20% 20% 20%;
         margin-top: 2em; } }
     .sponsors__content__img {
-      width: 60%;
+      width: 70%;
+      height: auto;
       margin-bottom: 10px;
-      transition: width 0.2s ease-in-out; }
+      transition: 0.2s ease-in-out; }
+      @media (min-width: 768px) {
+        .sponsors__content__img {
+          width: 50%; } }
       .sponsors__content__img:hover {
-        width: 80%; }
+        width: 80%;
+        z-index: 1; }
+        @media (min-width: 768px) {
+          .sponsors__content__img:hover {
+            width: 100%; } }
   @media (min-width: 768px) {
     .sponsors {
       margin-top: 2em; } }
