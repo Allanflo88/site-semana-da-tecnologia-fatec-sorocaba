@@ -428,7 +428,7 @@ body {
     justify-items: center; }
     @media (min-width: 768px) {
       .sponsors__content {
-        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-columns: repeat(4, 1fr);
         margin-top: 2em; } }
     .sponsors__content__img {
       width: 70%;
