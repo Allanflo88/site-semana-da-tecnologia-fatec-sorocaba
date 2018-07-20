@@ -6,39 +6,40 @@ var photo = 0,
   changingSlide = 0,
   actualOrganizer = "",
   isShownOrganizers = false;
+const tamImg = "16em";
 
 function start() {
-  if (window.innerWidth < 1024) {
-    for (var i = 1; i < 6; i++) {
-      document.getElementById("img" + i).style.width = "0";
-    }
+  if (window.innerWidth < 768) {
+    var elements = document.querySelectorAll(".previous__gallery__image--right");
+    elements.forEach((e)=>{
+      e.style.width = "0";
+    });
   }
   else {
-    for (var i = 0; i < 6; i++) {
-      document.getElementById("img" + i).className = "previous__gallery__image";
-    }
+    var elements = document.querySelectorAll(".previous__gallery__image");
+    elements.forEach((e)=>{
+      e.classList.remove("previous__gallery__image--right");
+    });
   }
 }
 
 function nextPhoto() {
   if (photo < 5) {
-    document.getElementById("img" + photo).className =
-      "previous__gallery__image previous__gallery__image--left";
+    const gallery = " previous__gallery__image";
+    document.getElementById("img" + photo).className = gallery + gallery + "--left";
     photo += 1;
-    document.getElementById("img" + photo).style.width = "16em";
-    document.getElementById("img" + photo).className =
-      "previous__gallery__image";
+    document.getElementById("img" + photo).style.width = tamImg;
+    document.getElementById("img" + photo).className = gallery;
     document.getElementById("img" + (photo - 1)).style.width = "0";
   }
 }
 function previousPhoto() {
   if (photo > 0) {
-    document.getElementById("img" + photo).className =
-      "previous__gallery__image previous__gallery__image--right";
+    const gallery = " previous__gallery__image";
+    document.getElementById("img" + photo).className = gallery + gallery + "--right";
     photo -= 1;
-    document.getElementById("img" + photo).style.width = "16em";
-    document.getElementById("img" + photo).className =
-      "previous__gallery__image";
+    document.getElementById("img" + photo).style.width = tamImg;
+    document.getElementById("img" + photo).className = gallery;
     document.getElementById("img" + (photo + 1)).style.width = "0";
   }
 }
