@@ -49,7 +49,7 @@ function changeTab(tab) {
   const btn = "speakers__tabs__tab";
 
   var week = ["monday", "tuesday", "wednesday", "thursday", "friday"];
-  var containers = document.getElementsByClassName("speakers__container");
+  var containers = document.getElementsByClassName(container);
   var containerAtual = document.getElementsByClassName(container + active);
   var tabs = document.getElementsByClassName(tab + " speakers__tabs__tab--active");
 
@@ -67,7 +67,7 @@ function changeTabArea(tab) {
   const btn = "instructors__tabs__tab";
 
   var areas = ["frontend", "backend"];
-  var containers = document.getElementsByClassName("instructors__container");
+  var containers = document.getElementsByClassName(container);
   var containerAtual = document.getElementsByClassName(container + active);
 
   containerAtual.namedItem(tabAreaAtual + "__container").className = container;
