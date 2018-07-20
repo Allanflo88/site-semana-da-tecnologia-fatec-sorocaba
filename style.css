@@ -77,7 +77,8 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; }
+  margin-top: 20px;
+  z-index: 1; }
   .call__title {
     color: white;
     text-transform: uppercase;
@@ -428,8 +429,9 @@ body {
     justify-items: center; }
     @media (min-width: 768px) {
       .sponsors__content {
-        grid-template-columns: repeat(4, 1fr);
-        margin-top: 2em; } }
+        grid-template-columns: 20% 20% 20% 20%;
+        margin-top: 2em;
+        justify-content: center; } }
     .sponsors__content__img {
       width: 70%;
       height: auto;

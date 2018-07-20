@@ -9,16 +9,17 @@ var photo = 0,
 const tamImg = "16em";
 
 function start() {
+  const gallery = "previous__gallery__image";
   if (window.innerWidth < 768) {
-    var elements = document.querySelectorAll(".previous__gallery__image--right");
+    var elements = document.querySelectorAll("."+ gallery + "--right");
     elements.forEach((e)=>{
       e.style.width = "0";
     });
   }
   else {
-    var elements = document.querySelectorAll(".previous__gallery__image");
+    var elements = document.querySelectorAll("."+ gallery);
     elements.forEach((e)=>{
-      e.classList.remove("previous__gallery__image--right");
+      e.classList.remove(gallery + "--right");
     });
   }
 }
@@ -46,25 +47,25 @@ function previousPhoto() {
 function changeTab(tab) {
   const container = "speakers__container";
   const active = " speakers__container--active";
-  const btn = "speakers__tabs__tab";
+  const btn = " speakers__tabs__tab";
 
   var week = ["monday", "tuesday", "wednesday", "thursday", "friday"];
   var containers = document.getElementsByClassName(container);
   var containerAtual = document.getElementsByClassName(container + active);
-  var tabs = document.getElementsByClassName(tab + " speakers__tabs__tab--active");
+  var tabs = document.getElementsByClassName(tab + btn +"--active");
 
   containerAtual.namedItem(tabAtual + "__container").className = container;
   containers.namedItem(week[tab] + "__container").className = container + active;
 
   document.getElementById(tabAtual + "__button").className = btn;
-  document.getElementById(week[tab] + "__button").className = btn + " speakers__tabs__tab--active";
+  document.getElementById(week[tab] + "__button").className = btn + btn + "--active";
   tabAtual = week[tab];
 }
 
 function changeTabArea(tab) {
   const container = "instructors__container";
   const active = " instructors__container--active";
-  const btn = "instructors__tabs__tab";
+  const btn = " instructors__tabs__tab";
 
   var areas = ["frontend", "backend"];
   var containers = document.getElementsByClassName(container);
@@ -73,13 +74,14 @@ function changeTabArea(tab) {
   containerAtual.namedItem(tabAreaAtual + "__container").className = container;
   containers.namedItem(areas[tab] + "__container").className = container + active;
   document.getElementById(tabAreaAtual + "__button").className = btn;
-  document.getElementById(areas[tab] + "__button").className = btn + " instructors__tabs__tab--active";
+  document.getElementById(areas[tab] + "__button").className = btn + btn + " instructors__tabs__tab--active";
   tabAreaAtual = areas[tab];
 }
 
 function animateButton() {
-  var button = document.getElementById("call__button");
-  button.className = "call__button call__button--active";
+  const btn = " call__button";
+  var button = document.getElementById(btn.trim());
+  button.className = btn + btn + "--active";
   button.innerText = "";
   setTimeout(() => {
     window.location.href = "http://www.fatecsorocaba.edu.br/";
