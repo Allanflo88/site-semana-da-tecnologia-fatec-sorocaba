@@ -5,7 +5,9 @@ var photo = 0,
   tabAreaAtual = "frontend",
   changingSlide = 0,
   actualOrganizer = "",
-  isShownOrganizers = false;
+  isShownOrganizers = false,
+  galleryListener = "",
+  x0 = null;
 const tamImg = "16em",
   orgContainer = "organization__container",
   orgButton = "organization__button",
@@ -17,7 +19,39 @@ const tamImg = "16em",
   instContainer = " instructors__container",
   instBtn = " instructors__tabs__tab";
 
+
+
+
+
+function unify(e) { 
+  return e.changedTouches ? e.changedTouches[0] : e 
+};
+
+function lock(e) { 
+  x0 = unify(e).clientX 
+};
+
+function move(e) {
+  if(x0 || x0 === 0) {
+    let dx = unify(e).clientX - x0, s = Math.sign(dx);
+
+    if(x0 > dx){
+      nextPhoto();
+    }
+    else{
+      previousPhoto();
+    }
+	
+    x0 = null
+  }
+};
+
+
+
 function start() {
+  galleryListener = document.getElementById("gallery");
+  galleryListener.addEventListener("touchstart", lock, false);
+galleryListener.addEventListener("touchend", move, false);
   if (window.innerWidth < 768) {
     var elements = document.querySelectorAll("."+ (gallery.trim()) + "--right");
     elements.forEach((e)=>{
