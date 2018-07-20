@@ -8,13 +8,13 @@ var photo = 0,
   isShownOrganizers = false;
 
 function start() {
-  if(window.innerWidth < 1024){
+  if (window.innerWidth < 1024) {
     for (var i = 1; i < 6; i++) {
       document.getElementById("img" + i).style.width = "0";
     }
   }
-  else{
-    for (var i = 1; i < 6; i++) {
+  else {
+    for (var i = 0; i < 6; i++) {
       document.getElementById("img" + i).className = "previous__gallery__image";
     }
   }
@@ -90,26 +90,26 @@ function showOrganizers(container, title, arrow) {
   container.classList.add("organization__container--show");
   title.classList.add("organization__button--active");
   arrow.classList.add("organization__button__arrow--active");
-  
+
 }
 
 function closeOrganizers(container, title, arrow) {
   container.classList.remove("organization__container--show");
   title.classList.remove("organization__button--active");
   arrow.classList.remove("organization__button__arrow--active");
-  
+
 }
 
-function interactOrganizers(){
+function interactOrganizers() {
   var container = document.getElementById("organizer__container");
   var title = document.getElementById("organizer__title");
   var arrow = document.getElementById("organization__arrow");
 
-  if(!isShownOrganizers){
+  if (!isShownOrganizers) {
     showOrganizers(container, title, arrow);
     isShownOrganizers = true
   }
-  else{
+  else {
     closeOrganizers(container, title, arrow);
     isShownOrganizers = false;
   }
@@ -120,36 +120,36 @@ function showOrganizer(organizer) {
   organizer.childNodes.item(1).classList.add("organization__container__collapse__text--active");
   organizer.childNodes.item(3).classList.add("organization__container__collapse__links--active");
   organizer.childNodes.item(3).childNodes.forEach((elem) => {
-      if(elem.localName == "a"){
-        elem.childNodes.item(1).classList.add("organization__container__collapse__links__img--active");
-      }
+    if (elem.localName == "a") {
+      elem.childNodes.item(1).classList.add("organization__container__collapse__links__img--active");
+    }
   });
 }
 
-function closeOrganizer(organizer){
+function closeOrganizer(organizer) {
   organizer.classList.remove("organization__container__collapse--show");
   organizer.childNodes.item(1).classList.remove("organization__container__collapse__text--active");
   organizer.childNodes.item(3).classList.remove("organization__container__collapse__links--active");
   organizer.childNodes.item(3).childNodes.forEach((elem) => {
-      if(elem.localName == "a"){
-        elem.childNodes.item(1).classList.remove("organization__container__collapse__links__img--active");
-      }
+    if (elem.localName == "a") {
+      elem.childNodes.item(1).classList.remove("organization__container__collapse__links__img--active");
+    }
   });
 }
 
-function interactOrganizer(index){
+function interactOrganizer(index) {
   var organizer = document.getElementById("organizer" + index);
   if (actualOrganizer) {
     closeOrganizer(document.getElementById("organizer" + actualOrganizer));
-    if(actualOrganizer != index){
+    if (actualOrganizer != index) {
       showOrganizer(organizer);
       actualOrganizer = index;
       return;
     }
     actualOrganizer = "";
-    
+
   }
-  else{
+  else {
     showOrganizer(organizer);
     actualOrganizer = index;
   }

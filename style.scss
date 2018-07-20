@@ -490,7 +490,7 @@ body {
     }
 
     &__image {
-      width: 100%;
+      width: 16em;
       height: auto;
       transition: 1s ease-out;
 
@@ -502,6 +502,10 @@ body {
       &--right {
         width: 0;
         transform: translateX(100%);
+      }
+
+      @include tablet{
+        width: 100%;
       }
     }
 

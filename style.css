@@ -366,7 +366,7 @@ body {
         background-color: transparent;
         margin-top: 2em; } }
     .previous__gallery__image {
-      width: 100%;
+      width: 16em;
       height: auto;
       transition: 1s ease-out; }
       .previous__gallery__image--left {
@@ -375,6 +375,9 @@ body {
       .previous__gallery__image--right {
         width: 0;
         transform: translateX(100%); }
+      @media (min-width: 768px) {
+        .previous__gallery__image {
+          width: 100%; } }
     .previous__gallery__button {
       position: absolute;
       z-index: 1; }
