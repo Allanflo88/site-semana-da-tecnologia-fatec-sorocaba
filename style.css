@@ -150,7 +150,7 @@ body {
     @media (min-width: 768px) {
       .speakers__container {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         justify-items: center; } }
     .speakers__container--active {
@@ -166,6 +166,12 @@ body {
       width: 90%;
       margin-top: 20px;
       height: auto; }
+      @media (min-width: 768px) {
+        .speakers__container__speaker {
+          flex-flow: column;
+          align-items: center;
+          width: 100%;
+          margin-top: 30px; } }
       .speakers__container__speaker__avatar {
         border-radius: 100%;
         width: 4em;
@@ -173,7 +179,10 @@ body {
         padding-left: 10px; }
         @media (min-width: 768px) {
           .speakers__container__speaker__avatar {
-            width: 8em; } }
+            width: 8em;
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 10px; } }
       .speakers__container__speaker__text {
         padding-right: 10px;
         display: flex;
@@ -183,10 +192,22 @@ body {
         width: 100%; }
         @media (min-width: 768px) {
           .speakers__container__speaker__text {
-            padding-right: 20px;
-            font-size: medium; } }
-        .speakers__container__speaker__text .biography {
+            padding-right: 0;
+            font-size: medium;
+            text-align: center;
+            align-items: center; } }
+        @media (min-width: 768px) {
+          .speakers__container__speaker__text__name {
+            padding-top: 20px;
+            font-size: larger; } }
+        .speakers__container__speaker__text__biography {
           display: none; }
+          @media (min-width: 768px) {
+            .speakers__container__speaker__text__biography {
+              padding-top: 20px;
+              display: block;
+              text-align: justify;
+              width: 80%; } }
   @media (min-width: 1024px) {
     .speakers {
       width: 60%; } }
@@ -231,12 +252,12 @@ body {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 0;
-    opacity: 0; }
+    opacity: 0;
+    height: 0; }
     @media (min-width: 768px) {
       .instructors__container {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         justify-items: center; } }
     .instructors__container--active {
@@ -244,12 +265,20 @@ body {
       opacity: 1;
       transition: opacity 0.5s ease-in; }
     .instructors__container__instructor {
+      position: relative;
       display: flex;
       flex-flow: row;
       align-content: center;
       justify-items: center;
+      width: 90%;
       margin-top: 20px;
-      width: 90%; }
+      height: auto; }
+      @media (min-width: 768px) {
+        .instructors__container__instructor {
+          flex-flow: column;
+          align-items: center;
+          width: 100%;
+          margin-top: 30px; } }
       .instructors__container__instructor__avatar {
         border-radius: 100%;
         width: 4em;
@@ -257,7 +286,10 @@ body {
         padding-left: 10px; }
         @media (min-width: 768px) {
           .instructors__container__instructor__avatar {
-            width: 8em; } }
+            width: 8em;
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 10px; } }
       .instructors__container__instructor__text {
         padding-right: 10px;
         display: flex;
@@ -267,10 +299,22 @@ body {
         width: 100%; }
         @media (min-width: 768px) {
           .instructors__container__instructor__text {
-            padding-right: 20px;
-            font-size: medium; } }
+            padding-right: 0;
+            font-size: medium;
+            text-align: center;
+            align-items: center; } }
+        @media (min-width: 768px) {
+          .instructors__container__instructor__text__name {
+            padding-top: 20px;
+            font-size: larger; } }
         .instructors__container__instructor__text__biography {
           display: none; }
+          @media (min-width: 768px) {
+            .instructors__container__instructor__text__biography {
+              padding-top: 20px;
+              display: block;
+              text-align: justify;
+              width: 80%; } }
   @media (min-width: 1024px) {
     .instructors {
       width: 60%; } }
@@ -357,7 +401,7 @@ body {
     .sponsors__content__img {
       width: 60%;
       margin-bottom: 10px;
-      transition: width .2s ease-in-out; }
+      transition: width 0.2s ease-in-out; }
       .sponsors__content__img:hover {
         width: 80%; }
   @media (min-width: 1024px) {

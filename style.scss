@@ -104,9 +104,8 @@ body {
         color: $primary-green;
       }
     }
-
   }
-  
+
   @include desktop {
     width: 60%;
   }
@@ -218,7 +217,7 @@ body {
     height: 0;
     @include tablet {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       justify-items: center;
     }
@@ -239,6 +238,13 @@ body {
       margin-top: 20px;
       height: auto;
 
+      @include tablet {
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+      }
+
       &__avatar {
         border-radius: 100%;
         width: 4em;
@@ -247,6 +253,9 @@ body {
 
         @include tablet {
           width: 8em;
+          padding-right: 0;
+          padding-left: 0;
+          padding-bottom: 10px;
         }
       }
 
@@ -259,18 +268,29 @@ body {
         width: 100%;
 
         @include tablet {
-          padding-right: 20px;
+          padding-right: 0;
           font-size: medium;
+          text-align: center;
+          align-items: center;
         }
 
-        .name {
+        &__name {
+          @include tablet {
+            padding-top: 20px;
+
+            font-size: larger;
+          }
         }
 
-        .talk {
-        }
-
-        .biography {
+        &__biography {
           display: none;
+
+          @include tablet {
+            padding-top: 20px;
+            display: block;
+            text-align: justify;
+            width: 80%;
+          }
         }
       }
     }
@@ -328,11 +348,11 @@ body {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 0;
     opacity: 0;
+    height: 0;
     @include tablet {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       justify-items: center;
     }
@@ -344,12 +364,21 @@ body {
     }
 
     &__instructor {
+      position: relative;
       display: flex;
       flex-flow: row;
       align-content: center;
       justify-items: center;
-      margin-top: 20px;
       width: 90%;
+      margin-top: 20px;
+      height: auto;
+
+      @include tablet {
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+      }
 
       &__avatar {
         border-radius: 100%;
@@ -359,6 +388,9 @@ body {
 
         @include tablet {
           width: 8em;
+          padding-right: 0;
+          padding-left: 0;
+          padding-bottom: 10px;
         }
       }
 
@@ -371,11 +403,29 @@ body {
         width: 100%;
 
         @include tablet {
-          padding-right: 20px;
+          padding-right: 0;
           font-size: medium;
+          text-align: center;
+          align-items: center;
         }
+
+        &__name {
+          @include tablet {
+            padding-top: 20px;
+
+            font-size: larger;
+          }
+        }
+
         &__biography {
           display: none;
+
+          @include tablet {
+            padding-top: 20px;
+            display: block;
+            text-align: justify;
+            width: 80%;
+          }
         }
       }
     }
@@ -492,7 +542,7 @@ body {
     &__img {
       width: 60%;
       margin-bottom: 10px;
-      transition: width .2s ease-in-out;
+      transition: width 0.2s ease-in-out;
       &:hover {
         width: 80%;
       }
