@@ -575,8 +575,9 @@ body {
     justify-items: center;
 
     @include tablet {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 20% 20% 20% 20%;
       margin-top: 2em;
+      justify-content: center;
     }
 
     &__img {
