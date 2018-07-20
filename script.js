@@ -6,10 +6,18 @@ var photo = 0,
   changingSlide = 0,
   actualOrganizer = "",
   isShownOrganizers = false;
-const tamImg = "16em";
+const tamImg = "16em",
+  orgContainer = "organization__container",
+  orgButton = "organization__button",
+  organizerCollapse = "organization__container__collapse",
+  gallery = " previous__gallery__image",
+  spkContainer = " speakers__container",
+  active = "--active",
+  spkTab = " speakers__tabs__tab",
+  instContainer = " instructors__container",
+  instBtn = " instructors__tabs__tab";
 
 function start() {
-  const gallery = "previous__gallery__image";
   if (window.innerWidth < 768) {
     var elements = document.querySelectorAll("."+ gallery + "--right");
     elements.forEach((e)=>{
@@ -26,7 +34,6 @@ function start() {
 
 function nextPhoto() {
   if (photo < 5) {
-    const gallery = " previous__gallery__image";
     document.getElementById("img" + photo).className = gallery + gallery + "--left";
     photo += 1;
     document.getElementById("img" + photo).style.width = tamImg;
@@ -36,7 +43,6 @@ function nextPhoto() {
 }
 function previousPhoto() {
   if (photo > 0) {
-    const gallery = " previous__gallery__image";
     document.getElementById("img" + photo).className = gallery + gallery + "--right";
     photo -= 1;
     document.getElementById("img" + photo).style.width = tamImg;
@@ -45,36 +51,27 @@ function previousPhoto() {
   }
 }
 function changeTab(tab) {
-  const container = "speakers__container";
-  const active = " speakers__container--active";
-  const btn = " speakers__tabs__tab";
 
   var week = ["monday", "tuesday", "wednesday", "thursday", "friday"];
-  var containers = document.getElementsByClassName(container);
-  var containerAtual = document.getElementsByClassName(container + active);
-  var tabs = document.getElementsByClassName(tab + btn +"--active");
+  var containers = document.getElementsByClassName(spkContainer);
+  var containerAtual = document.querySelectorAll("." + (spkContainer.trim()) + active);
+  containerAtual.item(0).className = spkContainer.trim();
+  containers.namedItem(week[tab] + "__container").className = spkContainer + spkContainer + active;
 
-  containerAtual.namedItem(tabAtual + "__container").className = container;
-  containers.namedItem(week[tab] + "__container").className = container + active;
-
-  document.getElementById(tabAtual + "__button").className = btn;
-  document.getElementById(week[tab] + "__button").className = btn + btn + "--active";
+  document.getElementById(tabAtual + "__button").className = spkTab;
+  document.getElementById(week[tab] + "__button").className = spkTab + spkTab + active;
   tabAtual = week[tab];
 }
 
 function changeTabArea(tab) {
-  const container = "instructors__container";
-  const active = " instructors__container--active";
-  const btn = " instructors__tabs__tab";
-
   var areas = ["frontend", "backend"];
-  var containers = document.getElementsByClassName(container);
-  var containerAtual = document.getElementsByClassName(container + active);
+  var containers = document.getElementsByClassName(instContainer);
+  var containerAtual = document.getElementsByClassName(instContainer + instContainer + active);
 
-  containerAtual.namedItem(tabAreaAtual + "__container").className = container;
-  containers.namedItem(areas[tab] + "__container").className = container + active;
-  document.getElementById(tabAreaAtual + "__button").className = btn;
-  document.getElementById(areas[tab] + "__button").className = btn + btn + " instructors__tabs__tab--active";
+  containerAtual.namedItem(tabAreaAtual + "__container").className = instContainer;
+  containers.namedItem(areas[tab] + "__container").className = instContainer + instContainer + active;
+  document.getElementById(tabAreaAtual + "__button").className = instBtn;
+  document.getElementById(areas[tab] + "__button").className = instBtn + instBtn + active;
   tabAreaAtual = areas[tab];
 }
 
@@ -90,16 +87,16 @@ function animateButton() {
 }
 
 function showOrganizers(container, title, arrow) {
-  container.classList.add("organization__container--show");
-  title.classList.add("organization__button--active");
-  arrow.classList.add("organization__button__arrow--active");
+  container.classList.add(orgContainer + "--show");
+  title.classList.add(orgButton + active);
+  arrow.classList.add(orgButton + "__arrow" + active);
 
 }
 
 function closeOrganizers(container, title, arrow) {
-  container.classList.remove("organization__container--show");
-  title.classList.remove("organization__button--active");
-  arrow.classList.remove("organization__button__arrow--active");
+  container.classList.remove(orgContainer + "--show");
+  title.classList.remove(orgButton + active);
+  arrow.classList.remove(orgButton + active);
 
 }
 
@@ -119,23 +116,23 @@ function interactOrganizers() {
 }
 
 function showOrganizer(organizer) {
-  organizer.classList.add("organization__container__collapse--show");
-  organizer.childNodes.item(1).classList.add("organization__container__collapse__text--active");
-  organizer.childNodes.item(3).classList.add("organization__container__collapse__links--active");
+  organizer.classList.add(organizerCollapse + "--show");
+  organizer.childNodes.item(1).classList.add(organizerCollapse + "__text" + active);
+  organizer.childNodes.item(3).classList.add( organizerCollapse + "__links" + active);
   organizer.childNodes.item(3).childNodes.forEach((elem) => {
     if (elem.localName == "a") {
-      elem.childNodes.item(1).classList.add("organization__container__collapse__links__img--active");
+      elem.childNodes.item(1).classList.add(organizerCollapse + "__links__img" + active);
     }
   });
 }
 
 function closeOrganizer(organizer) {
-  organizer.classList.remove("organization__container__collapse--show");
-  organizer.childNodes.item(1).classList.remove("organization__container__collapse__text--active");
-  organizer.childNodes.item(3).classList.remove("organization__container__collapse__links--active");
+  organizer.classList.remove(organizerCollapse + "--show");
+  organizer.childNodes.item(1).classList.remove(organizerCollapse + "__text" + active);
+  organizer.childNodes.item(3).classList.remove(organizerCollapse + "__links" + active);
   organizer.childNodes.item(3).childNodes.forEach((elem) => {
     if (elem.localName == "a") {
-      elem.childNodes.item(1).classList.remove("organization__container__collapse__links__img--active");
+      elem.childNodes.item(1).classList.remove(organizerCollapse + "__links__img" + active);
     }
   });
 }
