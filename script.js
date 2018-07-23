@@ -51,7 +51,7 @@ function move(e) {
 function start() {
   galleryListener = document.getElementById("gallery");
   galleryListener.addEventListener("touchstart", lock, false);
-galleryListener.addEventListener("touchend", move, false);
+  galleryListener.addEventListener("touchend", move, false);
   if (window.innerWidth < 768) {
     var elements = document.querySelectorAll("."+ (gallery.trim()) + "--right");
     elements.forEach((e)=>{
