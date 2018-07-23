@@ -290,7 +290,8 @@ body {
       align-content: center;
       justify-items: center;
       width: 90%;
-      height: auto; }
+      height: auto;
+      margin-top: 20px; }
       @media (min-width: 768px) {
         .instructors__container__instructor {
           flex-flow: column;

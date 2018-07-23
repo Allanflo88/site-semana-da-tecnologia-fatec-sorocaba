@@ -396,6 +396,7 @@ body {
       justify-items: center;
       width: 90%;
       height: auto;
+      margin-top: 20px;
 
       @include tablet {
         flex-flow: column;
