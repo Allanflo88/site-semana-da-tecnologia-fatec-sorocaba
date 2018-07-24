@@ -83,7 +83,7 @@ function nextPhoto() {
     return;
   }
 
-  if (photo < 29) {
+  if (photo < 22) {
     document.getElementById("img" + photo).className = gallery + gallery + "--left";
     photo += 1;
     document.getElementById("img" + photo).style.width = tamImg;
