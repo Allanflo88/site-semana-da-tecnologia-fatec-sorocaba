@@ -377,17 +377,20 @@ body {
       left: -100%;
       transition: .5s ease-in; }
       .previous__gallery__intro__img {
-        width: 0;
+        width: 5em;
+        left: 100%;
         transform: rotate(180deg);
-        transition: transform 1s ease-in; }
+        transition-property: left;
+        transition: .5s ease-in; }
         .previous__gallery__intro__img--show {
-          width: 5em;
+          left: 0;
           transform: rotate(180deg); }
       .previous__gallery__intro__title {
-        font-size: 0;
-        transition: transform 1s ease-in; }
+        left: 100%;
+        transition-property: left;
+        transition: .5s ease-in; }
         .previous__gallery__intro__title--show {
-          font-size: 1.5em; }
+          left: 0; }
       .previous__gallery__intro--show {
         width: 100%;
         left: 0; }

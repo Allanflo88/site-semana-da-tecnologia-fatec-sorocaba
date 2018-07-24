@@ -504,22 +504,26 @@ body {
       transition: .5s ease-in;
 
       &__img {
-        width: 0;
+        width: 5em;
+        left: 100%;
+
         transform: rotate(180deg);
-        transition: transform 1s ease-in;
+        transition-property: left;
+        transition: .5s ease-in;
 
         &--show {
-          width: 5em;
+          left: 0;
           transform: rotate(180deg);
         }
       }
 
       &__title {
-        font-size: 0;
-        transition: transform 1s ease-in;
+        left: 100%;
+        transition-property: left;
+        transition: .5s ease-in;
 
         &--show {
-          font-size: 1.5em;
+          left: 0;
 
         }
       }
