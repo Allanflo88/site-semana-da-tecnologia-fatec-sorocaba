@@ -3,6 +3,7 @@ $secondary-color: #ab47bc;
 $primary-green: #b2ff59;
 $secondary-green: #ccff90;
 $primary-dark: rgb(39, 3, 39);
+$primary-dark-lessOpacity: rgba(39, 3, 39, 0.6);
 $secondary-dark: #424242;
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -96,7 +97,7 @@ body {
     text-align: justify;
     width: fit-content;
 
-    @include tablet{
+    @include tablet {
       width: 70%;
     }
 
@@ -111,7 +112,7 @@ body {
       }
     }
   }
-  @include tablet{
+  @include tablet {
     margin-top: 2em;
   }
 
@@ -240,7 +241,7 @@ body {
       opacity: 1;
       transition: opacity 0.5s ease-in;
 
-      @include tablet{
+      @include tablet {
         margin-top: 2em;
       }
     }
@@ -309,7 +310,7 @@ body {
       }
     }
   }
-  @include tablet{
+  @include tablet {
     margin-top: 2em;
   }
   @include desktop {
@@ -336,7 +337,7 @@ body {
     flex-flow: row;
     justify-content: center;
 
-    @include tablet{
+    @include tablet {
       margin-top: 2em;
     }
 
@@ -383,7 +384,7 @@ body {
       opacity: 1;
       transition: opacity 0.5s ease-in;
 
-      @include tablet{
+      @include tablet {
         margin-top: 2em;
       }
     }
@@ -452,7 +453,7 @@ body {
       }
     }
   }
-  @include tablet{
+  @include tablet {
     margin-top: 2em;
   }
   @include desktop {
@@ -488,6 +489,53 @@ body {
       margin-top: 2em;
     }
 
+    &__intro {
+      height: 50vh;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      width: 0;
+      transform: translateX(-100%);
+      position: absolute;
+      text-align: center;
+      background-color: $primary-dark-lessOpacity;
+
+      &__img {
+        width: 0;
+        transform: rotate(180deg);
+        transform: translateX(-100%);
+
+        &--show {
+          width: 5em;
+          transform: translateX(0);
+          transition: 1s ease-in;
+        }
+      }
+
+      &__title {
+        font-size: 0;
+        transform: translateX(-100%);
+
+        &--show {
+          font-size: 1.5em;
+          transform: translateX(0);
+          transition: 1s ease-in;
+        }
+      }
+
+      &--show {
+        width: 100%;
+        transform: translateX(0);
+        transition: 1s ease-in;
+
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
     &__image {
       width: 16em;
       height: auto;
@@ -503,55 +551,20 @@ body {
         transform: translateX(100%);
       }
 
-      @include tablet{
+      @include tablet {
         width: 100%;
-        transition: .5s ease-out;
+        transition: 0.5s ease-out;
       }
 
-      &:hover{
-        @include tablet{
+      &:hover {
+        @include tablet {
           width: 17em;
           z-index: 1;
-
         }
-  
-      }
-    }
-
-    &__button {
-      position: absolute;
-      z-index: 1;
-      &--previous {
-        left: 0;
-        img {
-          transform: rotate(180deg);
-          width: 1em;
-          height: auto;
-
-          @include tablet {
-            width: 2em;
-          }
-        }
-      }
-
-      &--next {
-        right: 0;
-        img {
-          width: 1em;
-          height: auto;
-
-          @include tablet {
-            width: 2em;
-          }
-        }
-      }
-
-      @include tablet {
-        display: none;
       }
     }
   }
-  @include tablet{
+  @include tablet {
     margin-top: 2em;
   }
   @include desktop {
@@ -590,20 +603,20 @@ body {
       margin-bottom: 10px;
       transition: 0.2s ease-in-out;
 
-      @include tablet{
+      @include tablet {
         width: 50%;
       }
       &:hover {
         width: 80%;
         z-index: 1;
 
-        @include tablet{
+        @include tablet {
           width: 100%;
         }
       }
     }
   }
-  @include tablet{
+  @include tablet {
     margin-top: 2em;
   }
   @include desktop {
@@ -761,7 +774,7 @@ body {
       }
     }
   }
-  @include tablet{
+  @include tablet {
     margin-top: 2em;
   }
   @include desktop {

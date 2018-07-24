@@ -363,6 +363,40 @@ body {
         height: auto;
         background-color: transparent;
         margin-top: 2em; } }
+    .previous__gallery__intro {
+      height: 50vh;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      width: 0;
+      transform: translateX(-100%);
+      position: absolute;
+      text-align: center;
+      background-color: rgba(39, 3, 39, 0.6); }
+      .previous__gallery__intro__img {
+        width: 0;
+        transform: rotate(180deg);
+        transform: translateX(-100%); }
+        .previous__gallery__intro__img--show {
+          width: 5em;
+          transform: translateX(0);
+          transition: 1s ease-in; }
+      .previous__gallery__intro__title {
+        font-size: 0;
+        transform: translateX(-100%); }
+        .previous__gallery__intro__title--show {
+          font-size: 1.5em;
+          transform: translateX(0);
+          transition: 1s ease-in; }
+      .previous__gallery__intro--show {
+        width: 100%;
+        transform: translateX(0);
+        transition: 1s ease-in; }
+        @media (min-width: 768px) {
+          .previous__gallery__intro--show {
+            display: none; } }
     .previous__gallery__image {
       width: 16em;
       height: auto;
@@ -376,34 +410,11 @@ body {
       @media (min-width: 768px) {
         .previous__gallery__image {
           width: 100%;
-          transition: .5s ease-out; } }
+          transition: 0.5s ease-out; } }
       @media (min-width: 768px) {
         .previous__gallery__image:hover {
           width: 17em;
           z-index: 1; } }
-    .previous__gallery__button {
-      position: absolute;
-      z-index: 1; }
-      .previous__gallery__button--previous {
-        left: 0; }
-        .previous__gallery__button--previous img {
-          transform: rotate(180deg);
-          width: 1em;
-          height: auto; }
-          @media (min-width: 768px) {
-            .previous__gallery__button--previous img {
-              width: 2em; } }
-      .previous__gallery__button--next {
-        right: 0; }
-        .previous__gallery__button--next img {
-          width: 1em;
-          height: auto; }
-          @media (min-width: 768px) {
-            .previous__gallery__button--next img {
-              width: 2em; } }
-      @media (min-width: 768px) {
-        .previous__gallery__button {
-          display: none; } }
   @media (min-width: 768px) {
     .previous {
       margin-top: 2em; } }

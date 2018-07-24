@@ -7,7 +7,8 @@ var photo = 0,
   actualOrganizer = "",
   isShownOrganizers = false,
   galleryListener = "",
-  x0 = null;
+  x0 = null,
+  hasIntro = true;
 const tamImg = "16em",
   orgContainer = "organization__container",
   orgButton = "organization__button",
@@ -66,8 +67,23 @@ function start() {
   }
 }
 
+function fadeIntro(){
+  var intro = document.getElementById("intro");
+  intro.classList.remove("previous__gallery__intro--show");
+  intro.childNodes.item(1).classList.remove("previous__gallery__intro__title--show");
+  intro.childNodes.item(3).classList.remove("previous__gallery__intro__img--show");
+  hasIntro = false;
+}
+
 function nextPhoto() {
-  if (photo < 5) {
+
+  if(hasIntro){
+    fadeIntro();
+    photo += 1;
+    return;
+  }
+
+  if (photo < 29) {
     document.getElementById("img" + photo).className = gallery + gallery + "--left";
     photo += 1;
     document.getElementById("img" + photo).style.width = tamImg;
@@ -76,7 +92,7 @@ function nextPhoto() {
   }
 }
 function previousPhoto() {
-  if (photo > 0) {
+  if (photo > 1) {
     document.getElementById("img" + photo).className = gallery + gallery + "--right";
     photo -= 1;
     document.getElementById("img" + photo).style.width = tamImg;
