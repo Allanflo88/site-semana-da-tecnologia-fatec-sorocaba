@@ -135,7 +135,7 @@ function showOrganizers(container, title, arrow) {
 function closeOrganizers(container, title, arrow) {
   container.classList.remove(orgContainer + "--show");
   title.classList.remove(orgButton + active);
-  arrow.classList.remove(orgButton + active);
+  arrow.classList.remove(orgButton + "__arrow" + active);
 
 }
 

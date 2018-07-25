@@ -452,7 +452,7 @@ body {
         .sponsors__content__img {
           width: 50%; } }
       .sponsors__content__img:hover {
-        width: 80%;
+        width: 100%;
         z-index: 1; }
         @media (min-width: 768px) {
           .sponsors__content__img:hover {
@@ -466,7 +466,8 @@ body {
 
 .organization {
   width: 100%;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  margin-top: 30px; }
   .organization__button {
     flex-flow: column;
     align-items: center;
@@ -475,6 +476,7 @@ body {
     display: flex;
     border: 2px solid #9c27b0;
     border-radius: 10px;
+    background-color: transparent;
     color: #9c27b0;
     width: 40vh;
     margin: auto; }
@@ -498,6 +500,8 @@ body {
   .organization__container {
     width: 100%;
     display: none; }
+    .organization__container .container {
+      margin-bottom: 20px; }
     .organization__container--show {
       display: flex;
       flex-flow: column; }
@@ -507,7 +511,6 @@ body {
           grid-template-columns: repeat(2, 1fr);
           margin-top: 2em; } }
     .organization__container__organizer {
-      padding-bottom: 20px;
       display: flex;
       flex-flow: row;
       height: auto;
@@ -561,7 +564,7 @@ body {
         display: flex;
         flex-flow: row;
         justify-content: space-between;
-        margin: 0 5em;
+        margin: 0 6em;
         height: 0;
         opacity: 0; }
         .organization__container__collapse__links__img {

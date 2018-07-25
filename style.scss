@@ -609,7 +609,7 @@ body {
         width: 50%;
       }
       &:hover {
-        width: 80%;
+        width: 100%;
         z-index: 1;
 
         @include tablet {
@@ -628,6 +628,7 @@ body {
 .organization {
   width: 100%;
   margin-bottom: 30px;
+  margin-top: 30px;
   &__button {
     flex-flow: column;
     align-items: center;
@@ -636,6 +637,7 @@ body {
     display: flex;
     border: 2px solid $primary-color;
     border-radius: 10px;
+    background-color: transparent;
     color: $primary-color;
     width: 40vh;
     margin: auto;
@@ -669,6 +671,10 @@ body {
     width: 100%;
     display: none;
 
+    .container {
+      margin-bottom: 20px;
+    }
+
     &--show {
       display: flex;
       flex-flow: column;
@@ -681,7 +687,6 @@ body {
     }
 
     &__organizer {
-      padding-bottom: 20px;
       display: flex;
       flex-flow: row;
       height: auto;
@@ -749,7 +754,7 @@ body {
         display: flex;
         flex-flow: row;
         justify-content: space-between;
-        margin: 0 5em;
+        margin: 0 6em;
         height: 0;
         opacity: 0;
         &__img {
