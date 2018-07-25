@@ -20,71 +20,71 @@ const tamImg = "90vw",
   instContainer = " instructors__container",
   instBtn = " instructors__tabs__tab";
 
+function unify(e) {
+  return e.changedTouches ? e.changedTouches[0] : e;
+}
 
-
-
-
-function unify(e) { 
-  return e.changedTouches ? e.changedTouches[0] : e 
-};
-
-function lock(e) { 
-  x0 = unify(e).clientX 
-};
+function lock(e) {
+  x0 = unify(e).clientX;
+}
 
 function move(e) {
-  if(x0 || x0 === 0) {
-    let dx = unify(e).clientX - x0, s = Math.sign(dx);
+  if (x0 || x0 === 0) {
+    let dx = unify(e).clientX - x0,
+      s = Math.sign(dx);
 
-    if(x0 > dx){
-      nextPhoto();
+    if (dx != 0) {
+      if (x0 > dx) {
+        console.log(x0 + " " + dx);
+        nextPhoto();
+      } else {
+        previousPhoto();
+      }
     }
-    else{
-      previousPhoto();
-    }
-	
-    x0 = null
+
+    x0 = null;
   }
-};
-
-
+}
 
 function start() {
   galleryListener = document.getElementById("gallery");
   galleryListener.addEventListener("touchstart", lock, false);
   galleryListener.addEventListener("touchend", move, false);
   if (window.innerWidth < 768) {
-    var elements = document.querySelectorAll("."+ (gallery.trim()) + "--right");
-    elements.forEach((e)=>{
+    var elements = document.querySelectorAll("." + gallery.trim() + "--right");
+    elements.forEach(e => {
       e.style.width = "0";
     });
-  }
-  else {
-    var elements = document.querySelectorAll("."+ gallery.trim());
-    elements.forEach((e)=>{
-      e.classList.remove((gallery.trim()) + "--right");
+  } else {
+    var elements = document.querySelectorAll("." + gallery.trim());
+    elements.forEach(e => {
+      e.classList.remove(gallery.trim() + "--right");
     });
   }
 }
 
-function fadeIntro(){
+function fadeIntro() {
   var intro = document.getElementById("intro");
   intro.classList.remove("previous__gallery__intro--show");
-  intro.childNodes.item(1).classList.remove("previous__gallery__intro__title--show");
-  intro.childNodes.item(3).classList.remove("previous__gallery__intro__img--show");
+  intro.childNodes
+    .item(1)
+    .classList.remove("previous__gallery__intro__title--show");
+  intro.childNodes
+    .item(3)
+    .classList.remove("previous__gallery__intro__img--show");
   hasIntro = false;
 }
 
 function nextPhoto() {
-
-  if(hasIntro){
+  if (hasIntro) {
     fadeIntro();
     photo += 1;
     return;
   }
 
   if (photo < 22) {
-    document.getElementById("img" + photo).className = gallery + gallery + "--left";
+    document.getElementById("img" + photo).className =
+      gallery + gallery + "--left";
     photo += 1;
     document.getElementById("img" + photo).style.width = tamImg;
     document.getElementById("img" + photo).className = gallery;
@@ -93,7 +93,8 @@ function nextPhoto() {
 }
 function previousPhoto() {
   if (photo > 1) {
-    document.getElementById("img" + photo).className = gallery + gallery + "--right";
+    document.getElementById("img" + photo).className =
+      gallery + gallery + "--right";
     photo -= 1;
     document.getElementById("img" + photo).style.width = tamImg;
     document.getElementById("img" + photo).className = gallery;
@@ -101,27 +102,36 @@ function previousPhoto() {
   }
 }
 function changeTab(tab) {
-
   var week = ["monday", "tuesday", "wednesday", "thursday", "friday"];
   var containers = document.getElementsByClassName(spkContainer);
-  var containerAtual = document.querySelectorAll("." + (spkContainer.trim()) + active);
+  var containerAtual = document.querySelectorAll(
+    "." + spkContainer.trim() + active
+  );
   containerAtual.item(0).className = spkContainer.trim();
-  containers.namedItem(week[tab] + "__container").className = spkContainer + spkContainer + active;
+  containers.namedItem(week[tab] + "__container").className =
+    spkContainer + spkContainer + active;
 
   document.getElementById(tabAtual + "__button").className = spkTab;
-  document.getElementById(week[tab] + "__button").className = spkTab + spkTab + active;
+  document.getElementById(week[tab] + "__button").className =
+    spkTab + spkTab + active;
   tabAtual = week[tab];
 }
 
 function changeTabArea(tab) {
   var areas = ["frontend", "backend"];
   var containers = document.getElementsByClassName(instContainer);
-  var containerAtual = document.getElementsByClassName(instContainer + instContainer + active);
+  var containerAtual = document.getElementsByClassName(
+    instContainer + instContainer + active
+  );
 
-  containerAtual.namedItem(tabAreaAtual + "__container").className = instContainer;
-  containers.namedItem(areas[tab] + "__container").className = instContainer + instContainer + active;
+  containerAtual.namedItem(
+    tabAreaAtual + "__container"
+  ).className = instContainer;
+  containers.namedItem(areas[tab] + "__container").className =
+    instContainer + instContainer + active;
   document.getElementById(tabAreaAtual + "__button").className = instBtn;
-  document.getElementById(areas[tab] + "__button").className = instBtn + instBtn + active;
+  document.getElementById(areas[tab] + "__button").className =
+    instBtn + instBtn + active;
   tabAreaAtual = areas[tab];
 }
 
@@ -129,14 +139,12 @@ function showOrganizers(container, title, arrow) {
   container.classList.add(orgContainer + "--show");
   title.classList.add(orgButton + active);
   arrow.classList.add(orgButton + "__arrow" + active);
-
 }
 
 function closeOrganizers(container, title, arrow) {
   container.classList.remove(orgContainer + "--show");
   title.classList.remove(orgButton + active);
   arrow.classList.remove(orgButton + "__arrow" + active);
-
 }
 
 function interactOrganizers() {
@@ -146,9 +154,8 @@ function interactOrganizers() {
 
   if (!isShownOrganizers) {
     showOrganizers(container, title, arrow);
-    isShownOrganizers = true
-  }
-  else {
+    isShownOrganizers = true;
+  } else {
     closeOrganizers(container, title, arrow);
     isShownOrganizers = false;
   }
@@ -156,22 +163,34 @@ function interactOrganizers() {
 
 function showOrganizer(organizer) {
   organizer.classList.add(organizerCollapse + "--show");
-  organizer.childNodes.item(1).classList.add(organizerCollapse + "__text" + active);
-  organizer.childNodes.item(3).classList.add( organizerCollapse + "__links" + active);
-  organizer.childNodes.item(3).childNodes.forEach((elem) => {
+  organizer.childNodes
+    .item(1)
+    .classList.add(organizerCollapse + "__text" + active);
+  organizer.childNodes
+    .item(3)
+    .classList.add(organizerCollapse + "__links" + active);
+  organizer.childNodes.item(3).childNodes.forEach(elem => {
     if (elem.localName == "a") {
-      elem.childNodes.item(1).classList.add(organizerCollapse + "__links__img" + active);
+      elem.childNodes
+        .item(1)
+        .classList.add(organizerCollapse + "__links__img" + active);
     }
   });
 }
 
 function closeOrganizer(organizer) {
   organizer.classList.remove(organizerCollapse + "--show");
-  organizer.childNodes.item(1).classList.remove(organizerCollapse + "__text" + active);
-  organizer.childNodes.item(3).classList.remove(organizerCollapse + "__links" + active);
-  organizer.childNodes.item(3).childNodes.forEach((elem) => {
+  organizer.childNodes
+    .item(1)
+    .classList.remove(organizerCollapse + "__text" + active);
+  organizer.childNodes
+    .item(3)
+    .classList.remove(organizerCollapse + "__links" + active);
+  organizer.childNodes.item(3).childNodes.forEach(elem => {
     if (elem.localName == "a") {
-      elem.childNodes.item(1).classList.remove(organizerCollapse + "__links__img" + active);
+      elem.childNodes
+        .item(1)
+        .classList.remove(organizerCollapse + "__links__img" + active);
     }
   });
 }
@@ -186,9 +205,7 @@ function interactOrganizer(index) {
       return;
     }
     actualOrganizer = "";
-
-  }
-  else {
+  } else {
     showOrganizer(organizer);
     actualOrganizer = index;
   }
