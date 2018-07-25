@@ -35,7 +35,6 @@ function move(e) {
 
     if (dx != 0) {
       if (x0 > dx) {
-        console.log(x0 + " " + dx);
         nextPhoto();
       } else {
         previousPhoto();
