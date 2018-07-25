@@ -362,7 +362,8 @@ body {
         justify-items: center;
         height: auto;
         background-color: transparent;
-        margin-top: 2em; } }
+        margin-top: 2em;
+        overflow: visible; } }
     .previous__gallery__intro {
       height: 50vh;
       display: flex;
@@ -413,7 +414,7 @@ body {
           transition: 0.5s ease-out; } }
       @media (min-width: 768px) {
         .previous__gallery__image:hover {
-          width: 17em;
+          transform: scale(2);
           z-index: 1; } }
   @media (min-width: 768px) {
     .previous {
@@ -452,11 +453,8 @@ body {
         .sponsors__content__img {
           width: 50%; } }
       .sponsors__content__img:hover {
-        width: 100%;
+        transform: scale(2);
         z-index: 1; }
-        @media (min-width: 768px) {
-          .sponsors__content__img:hover {
-            width: 100%; } }
   @media (min-width: 768px) {
     .sponsors {
       margin-top: 2em; } }

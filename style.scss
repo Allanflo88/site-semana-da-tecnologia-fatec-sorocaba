@@ -487,6 +487,7 @@ body {
       height: auto;
       background-color: transparent;
       margin-top: 2em;
+      overflow: visible;
     }
 
     &__intro {
@@ -560,7 +561,7 @@ body {
 
       &:hover {
         @include tablet {
-          width: 17em;
+          transform: scale(2);
           z-index: 1;
         }
       }
@@ -609,12 +610,8 @@ body {
         width: 50%;
       }
       &:hover {
-        width: 100%;
+        transform: scale(2);
         z-index: 1;
-
-        @include tablet {
-          width: 100%;
-        }
       }
     }
   }
