@@ -398,7 +398,7 @@ body {
           .previous__gallery__intro--show {
             display: none; } }
     .previous__gallery__image {
-      width: 16em;
+      width: 90vw;
       height: auto;
       transition: 1s ease-out; }
       .previous__gallery__image--left {
