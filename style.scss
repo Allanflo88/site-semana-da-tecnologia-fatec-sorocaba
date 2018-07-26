@@ -284,6 +284,7 @@ body {
         justify-content: center;
         font-size: small;
         width: 100%;
+        line-height: normal;
 
         @include tablet {
           padding-right: 0;
@@ -427,6 +428,7 @@ body {
         justify-content: center;
         font-size: small;
         width: 100%;
+        line-height: normal;
 
         @include tablet {
           padding-right: 0;

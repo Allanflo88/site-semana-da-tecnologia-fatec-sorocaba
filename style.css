@@ -201,7 +201,8 @@ body {
         flex-flow: column;
         justify-content: center;
         font-size: small;
-        width: 100%; }
+        width: 100%;
+        line-height: normal; }
         @media (min-width: 768px) {
           .speakers__container__speaker__text {
             padding-right: 0;
@@ -315,7 +316,8 @@ body {
         flex-flow: column;
         justify-content: center;
         font-size: small;
-        width: 100%; }
+        width: 100%;
+        line-height: normal; }
         @media (min-width: 768px) {
           .instructors__container__instructor__text {
             padding-right: 0;
