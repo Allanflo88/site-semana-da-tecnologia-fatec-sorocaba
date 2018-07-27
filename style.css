@@ -532,14 +532,14 @@ body {
         flex-flow: row;
         justify-content: space-between;
         align-items: center;
-        width: 70%; }
+        width: 74%; }
         .organization__container__organizer__text img {
           transform: rotate(90deg);
           width: 1em;
           height: auto; }
         @media (min-width: 768px) {
           .organization__container__organizer__text {
-            width: 100%; } }
+            width: 78%; } }
     .organization__container__collapse {
       display: flex;
       flex-flow: column;

@@ -709,7 +709,7 @@ body {
         flex-flow: row;
         justify-content: space-between;
         align-items: center;
-        width: 70%;
+        width: 74%;
 
         img {
           transform: rotate(90deg);
@@ -718,7 +718,7 @@ body {
         }
 
         @include tablet {
-          width: 100%;
+          width: 78%;
         }
       }
     }
