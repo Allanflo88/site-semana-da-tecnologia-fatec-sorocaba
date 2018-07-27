@@ -590,7 +590,7 @@ body {
   }
 
   &__content {
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -598,19 +598,20 @@ body {
     justify-items: center;
 
     @include tablet {
+      width: 100%;
       grid-template-columns: 20% 20% 20% 20%;
       margin-top: 2em;
       justify-content: center;
     }
 
     &__img {
-      width: 70%;
+      width: 100%;
       height: auto;
       margin-bottom: 10px;
       transition: 0.2s ease-in-out;
 
       @include tablet {
-        width: 50%;
+        width: 100%;
       }
       &:hover {
         transform: scale(2);

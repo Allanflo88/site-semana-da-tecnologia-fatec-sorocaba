@@ -436,7 +436,7 @@ body {
     text-transform: uppercase;
     text-align: center; }
   .sponsors__content {
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -444,17 +444,18 @@ body {
     justify-items: center; }
     @media (min-width: 768px) {
       .sponsors__content {
+        width: 100%;
         grid-template-columns: 20% 20% 20% 20%;
         margin-top: 2em;
         justify-content: center; } }
     .sponsors__content__img {
-      width: 70%;
+      width: 100%;
       height: auto;
       margin-bottom: 10px;
       transition: 0.2s ease-in-out; }
       @media (min-width: 768px) {
         .sponsors__content__img {
-          width: 50%; } }
+          width: 100%; } }
       .sponsors__content__img:hover {
         transform: scale(2);
         z-index: 1; }
