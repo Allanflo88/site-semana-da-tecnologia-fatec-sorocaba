@@ -46,6 +46,7 @@ function move(e) {
 }
 
 function start() {
+  document.getElementById("header_img").classList.add("header__title__img--show");
   galleryListener = document.getElementById("gallery");
   galleryListener.addEventListener("touchstart", lock, false);
   galleryListener.addEventListener("touchend", move, false);

@@ -40,6 +40,7 @@ body {
   flex-flow: column;
   align-items: center;
   line-height: 25px;
+  overflow-x: hidden;
 }
 .header {
   background-color: $primary-color;
@@ -56,11 +57,17 @@ body {
     flex-flow: row;
     height: auto;
     justify-content: center;
-    img {
+    &__img {
+      opacity: 0;
       width: auto;
       height: auto;
       max-width: 80vw;
       max-height: 80vh;
+      transition: opacity .6s ease-in;
+
+      &--show {
+        opacity: 1;
+      }
     }
 
     @include tablet {
@@ -612,11 +619,12 @@ body {
 
       @include tablet {
         width: 100%;
+        &:hover {
+          transform: scale(2);
+          z-index: 1;
+        
       }
-      &:hover {
-        transform: scale(2);
-        z-index: 1;
-      }
+}
     }
   }
   @include tablet {
