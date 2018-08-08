@@ -28,7 +28,7 @@ body {
       height: auto;
       max-width: 80vw;
       max-height: 80vh;
-      transition: opacity .4s ease-in; }
+      transition: opacity .6s ease-in; }
       .header__title__img--show {
         opacity: 1; }
     @media (min-width: 768px) {

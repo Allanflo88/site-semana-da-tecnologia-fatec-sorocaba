@@ -1,16 +1,27 @@
+var gulp        = require("gulp");
+    sass        = require("gulp-sass"),
+    sourcemaps  = require("gulp-sourcemaps"),
+    browserSync = require("browser-sync").create(),
+    reload      = browserSync.reload;
+gulp.task("sass", () => {
+  return gulp
+    .src("./style.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest("./"));
+});
+gulp.task('serve', function () {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 
-var gulp = require("gulp");
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+    gulp.watch("*.html").on("change", reload);
+    gulp.watch("*.scss", gulp.series("sass")).on("change", reload);
+    gulp.watch("*.js").on("change", reload);
 
-gulp.task('sass', () => {
-    return gulp.src('./style.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./'))
-    }
-);
+});
 
-
-gulp.task('default', gulp.series('sass'));
+gulp.task("default", gulp.series("sass", "serve"));
