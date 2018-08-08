@@ -62,6 +62,6 @@ gulp.task("icons", () => {
         .pipe(gulp.dest("./build/images/favicons"));
 })
 
-gulp.task("build",gulp.series("html", "minify-css", "js","svg", "sponsors","previous", "organizers", "icons"));
+gulp.task("build",gulp.series("html","sass", "minify-css", "js","svg", "sponsors","previous", "organizers", "icons"));
 
 gulp.task("default", gulp.series("sass", "serve"));
