@@ -156,6 +156,7 @@ body {
     background-color: white;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
 
     a {
       color: $primary-dark;
@@ -221,6 +222,7 @@ body {
       padding: 0;
       width: 80px;
       margin: 0 10px;
+      cursor: pointer;
 
       &--active {
         color: white;
@@ -365,6 +367,7 @@ body {
       width: 80px;
       z-index: 1;
       margin: 0 10px;
+      cursor: pointer;
 
       &--active {
         color: white;
@@ -650,6 +653,7 @@ body {
     color: $primary-color;
     width: 40vh;
     margin: auto;
+    cursor: pointer;
 
     &__text {
       display: block;
@@ -723,6 +727,7 @@ body {
           transform: rotate(90deg);
           width: 1em;
           height: auto;
+          cursor: pointer;
         }
 
         @include tablet {
@@ -826,6 +831,7 @@ body {
     img {
       height: 50px;
       width: auto;
+      cursor: pointer;
     }
   }
 

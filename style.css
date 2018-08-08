@@ -98,7 +98,8 @@ body {
     height: 2em;
     background-color: white;
     font-weight: bold;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer; }
     .call__button a {
       color: #270327; }
       .call__button a:link {
@@ -150,7 +151,8 @@ body {
       height: 70px;
       padding: 0;
       width: 80px;
-      margin: 0 10px; }
+      margin: 0 10px;
+      cursor: pointer; }
       .speakers__tabs__tab--active {
         color: white;
         background-image: url("./images/full_hexagon.svg"); }
@@ -265,7 +267,8 @@ body {
       padding: 0;
       width: 80px;
       z-index: 1;
-      margin: 0 10px; }
+      margin: 0 10px;
+      cursor: pointer; }
       .instructors__tabs__tab--active {
         color: white;
         background-image: url("./images/full_hexagon.svg"); }
@@ -486,7 +489,8 @@ body {
     background-color: transparent;
     color: #9c27b0;
     width: 40vh;
-    margin: auto; }
+    margin: auto;
+    cursor: pointer; }
     .organization__button__text {
       display: block;
       font-size: 1.5em;
@@ -541,7 +545,8 @@ body {
         .organization__container__organizer__text img {
           transform: rotate(90deg);
           width: 1em;
-          height: auto; }
+          height: auto;
+          cursor: pointer; }
         @media (min-width: 768px) {
           .organization__container__organizer__text {
             width: 78%; } }
@@ -620,7 +625,8 @@ body {
         padding-left: 20px; } }
     .footer__logo img {
       height: 50px;
-      width: auto; }
+      width: auto;
+      cursor: pointer; }
   .footer__email {
     position: relative;
     font-weight: bold;
