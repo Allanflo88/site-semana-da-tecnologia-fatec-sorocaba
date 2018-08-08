@@ -63,7 +63,7 @@ body {
       height: auto;
       max-width: 80vw;
       max-height: 80vh;
-      transition: opacity .6s ease-in;
+      transition: opacity 0.6s ease-in;
 
       &--show {
         opacity: 1;
@@ -157,6 +157,13 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
+    width: 8em;
+    height: 1.5em;
+    font-size: 2em;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
 
     a {
       color: $primary-dark;
@@ -515,7 +522,7 @@ body {
       text-align: center;
       background-color: $primary-dark-lessOpacity;
       left: -100%;
-      transition: .5s ease-in;
+      transition: 0.5s ease-in;
 
       &__img {
         width: 5em;
@@ -523,7 +530,7 @@ body {
 
         transform: rotate(180deg);
         transition-property: left;
-        transition: .5s ease-in;
+        transition: 0.5s ease-in;
 
         &--show {
           left: 0;
@@ -534,11 +541,10 @@ body {
       &__title {
         left: 100%;
         transition-property: left;
-        transition: .5s ease-in;
+        transition: 0.5s ease-in;
 
         &--show {
           left: 0;
-
         }
       }
 
@@ -625,9 +631,8 @@ body {
         &:hover {
           transform: scale(2);
           z-index: 1;
-        
+        }
       }
-}
     }
   }
   @include tablet {
