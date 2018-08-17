@@ -23,14 +23,11 @@ body {
     height: auto;
     justify-content: center; }
     .header__title__img {
-      opacity: 0;
       width: auto;
       height: auto;
       max-width: 80vw;
       max-height: 80vh;
-      transition: opacity 0.6s ease-in; }
-      .header__title__img--show {
-        opacity: 1; }
+      transition: 0.6s ease-in; }
     @media (min-width: 768px) {
       .header__title {
         font-size: x-large; } }
@@ -106,7 +103,10 @@ body {
     display: flex;
     flex-flow: row;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    transition: .2s ease-out; }
+    .call__button:hover {
+      transform: scale(1.1); }
     .call__button a {
       color: #270327; }
       .call__button a:link {
@@ -159,10 +159,15 @@ body {
       padding: 0;
       width: 80px;
       margin: 0 10px;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: .2s ease-out; }
+      .speakers__tabs__tab:hover {
+        transform: scale(1.1); }
       .speakers__tabs__tab--active {
         color: white;
         background-image: url("./images/full_hexagon.svg"); }
+        .speakers__tabs__tab--active:hover {
+          transform: scale(1); }
   .speakers__container {
     width: 100%;
     display: flex;
@@ -275,10 +280,15 @@ body {
       width: 80px;
       z-index: 1;
       margin: 0 10px;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: .2s ease-out; }
+      .instructors__tabs__tab:hover {
+        transform: scale(1.1); }
       .instructors__tabs__tab--active {
         color: white;
         background-image: url("./images/full_hexagon.svg"); }
+        .instructors__tabs__tab--active:hover {
+          transform: scale(1); }
   .instructors__container {
     width: 100%;
     display: flex;
@@ -497,7 +507,10 @@ body {
     color: #9c27b0;
     width: 40vh;
     margin: auto;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: .2s ease-out; }
+    .organization__button:hover {
+      transform: scale(1.1); }
     .organization__button__text {
       display: block;
       font-size: 1.5em;
