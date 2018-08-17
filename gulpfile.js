@@ -3,16 +3,20 @@ var gulp        = require("gulp");
     sourcemaps  = require("gulp-sourcemaps"),
     browserSync = require("browser-sync").create(),
     cleanCSS    = require("gulp-clean-css"),
+    terser      = require("gulp-terser"),
     reload      = browserSync.reload;
 gulp.task("minify-css", () => {
     return gulp.src("./style.css")
         .pipe(sourcemaps.init())
         .pipe(cleanCSS())
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("./build"));
 });
 gulp.task("js", ()=>{
     return gulp.src("./script.js")
+        .pipe(sourcemaps.init())
+        .pipe(terser())
+        .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("./build"));
 })
 gulp.task("html", ()=>{
