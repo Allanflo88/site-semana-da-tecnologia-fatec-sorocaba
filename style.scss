@@ -755,6 +755,10 @@ body {
           width: 1em;
           height: auto;
           cursor: pointer;
+
+          &:hover {
+            transform: rotate(90deg) scale(1.1);
+          }
         }
 
         @include tablet {
@@ -807,6 +811,10 @@ body {
             height: 2em;
             transition: opacity 0.2s ease-in;
             opacity: 1;
+
+            &:hover {
+              transform: scale(1.2);
+            }
           }
         }
 

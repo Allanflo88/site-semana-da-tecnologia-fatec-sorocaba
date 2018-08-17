@@ -567,6 +567,8 @@ body {
           width: 1em;
           height: auto;
           cursor: pointer; }
+          .organization__container__organizer__text img:hover {
+            transform: rotate(90deg) scale(1.1); }
         @media (min-width: 768px) {
           .organization__container__organizer__text {
             width: 78%; } }
@@ -607,6 +609,8 @@ body {
             height: 2em;
             transition: opacity 0.2s ease-in;
             opacity: 1; }
+            .organization__container__collapse__links__img--active:hover {
+              transform: scale(1.2); }
         .organization__container__collapse__links--active {
           height: auto;
           transition: opacity 0.2s ease-in;
