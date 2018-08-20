@@ -104,13 +104,12 @@ body {
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    transition: .2s ease-out; }
+    transition: .2s ease-out;
+    color: #270327; }
+    .call__button:link {
+      text-decoration: none; }
     .call__button:hover {
       transform: scale(1.1); }
-    .call__button a {
-      color: #270327; }
-      .call__button a:link {
-        text-decoration: none; }
     @media (min-width: 768px) {
       .call__button {
         width: 8em;
@@ -373,6 +372,7 @@ body {
     text-align: center;
     text-transform: uppercase; }
   .previous__gallery {
+    margin: 0;
     background-color: #270327;
     width: 100%;
     height: 50vh;

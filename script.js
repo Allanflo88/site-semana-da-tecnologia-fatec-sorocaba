@@ -107,12 +107,16 @@ function changeTab(tab) {
     "." + spkContainer.trim() + active
   );
   containerAtual.item(0).className = spkContainer.trim();
+  containerAtual.item(0).setAttribute("aria-hidden", "true");
   containers.namedItem(week[tab] + "__container").className =
     spkContainer + spkContainer + active;
-
-  document.getElementById(tabAtual + "__button").className = spkTab;
-  document.getElementById(week[tab] + "__button").className =
-    spkTab + spkTab + active;
+  containers.namedItem(week[tab] + "__container").setAttribute("aria-hidden", "false");
+  var atual = document.getElementById(tabAtual + "__button");
+  atual.className = spkTab;
+  atual.setAttribute("aria-selected", "false");
+  atual = document.getElementById(week[tab] + "__button");
+  atual.className = spkTab + spkTab + active;
+  atual.setAttribute("aria-selected", "true");
   tabAtual = week[tab];
 }
 
@@ -126,11 +130,20 @@ function changeTabArea(tab) {
   containerAtual.namedItem(
     tabAreaAtual + "__container"
   ).className = instContainer;
+  containerAtual
+    .namedItem(tabAreaAtual + "__container")
+    .setAttribute("aria-hidden", "true");
   containers.namedItem(areas[tab] + "__container").className =
     instContainer + instContainer + active;
-  document.getElementById(tabAreaAtual + "__button").className = instBtn;
-  document.getElementById(areas[tab] + "__button").className =
-    instBtn + instBtn + active;
+  containers
+    .namedItem(areas[tab] + "__container")
+    .setAttribute("aria-hidden", "false");
+  var atual = document.getElementById(tabAreaAtual + "__button");
+  atual.className = instBtn;
+  atual.setAttribute("aria-selected", "false");
+  atual = document.getElementById(areas[tab] + "__button");
+  atual.className = instBtn + instBtn + active;
+  atual.setAttribute("aria-selected", "true");
   tabAreaAtual = areas[tab];
 }
 

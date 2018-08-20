@@ -19,7 +19,7 @@
 <body onload="start()">
     <header class="header">
         <div class="header__title">
-            <img id="header_img" class="header__title__img" src="./images/header.png">
+            <img id="header_img" role="banner" class="header__title__img" src="./images/header.png">
         </div>
     </header>
     <section class="introduction">
@@ -53,31 +53,32 @@
                 Palestrantes confirmados
             </h2>
         </div>
-        <div class="speakers__tabs">
-            <div class="container">
-                <button id="monday__button" name="monday" class="speakers__tabs__tab speakers__tabs__tab--active" onclick="changeTab(0)">
+        <div class="speakers__tabs" role="tabpanel">
+            <div class="container" role="tablist">
+                <button id="monday__button" role="tab" aria-selected="true" name="monday" class="speakers__tabs__tab speakers__tabs__tab--active"
+                    onclick="changeTab(0)">
                     Segunda
                 </button>
-                <button id="tuesday__button" name="tuesday" class="speakers__tabs__tab" onclick="changeTab(1)">
+                <button id="tuesday__button" role="tab" aria-selected="false" name="tuesday" class="speakers__tabs__tab" onclick="changeTab(1)">
                     Terça
                 </button>
-                <button id="wednesday__button" name="wednesday" class="speakers__tabs__tab" onclick="changeTab(2)">
+                <button id="wednesday__button" role="tab" aria-selected="false" name="wednesday" class="speakers__tabs__tab" onclick="changeTab(2)">
                     Quarta
                 </button>
             </div>
-            <div class="container">
-                <button id="thursday__button" name="thursday" class="speakers__tabs__tab" onclick="changeTab(3)">
+            <div class="container" role="tablist">
+                <button id="thursday__button" role="tab" aria-selected="false" name="thursday" class="speakers__tabs__tab" onclick="changeTab(3)">
                     Quinta
                 </button>
 
-                <button id="friday__button" name="friday" class="speakers__tabs__tab" onclick="changeTab(4)">
+                <button id="friday__button" role="tab" aria-selected="false" name="friday" class="speakers__tabs__tab" onclick="changeTab(4)">
                     Sexta
                 </button>
 
             </div>
 
         </div>
-        <div name="monday__container" class="speakers__container speakers__container--active">
+        <div name="monday__container" aria-hidden="false" class="speakers__container speakers__container--active">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -124,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div name="tuesday__container" class="speakers__container ">
+        <div name="tuesday__container" aria-hidden="true" class="speakers__container ">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -171,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div name="wednesday__container" class="speakers__container">
+        <div name="wednesday__container" aria-hidden="true" class="speakers__container">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -218,7 +219,7 @@
                 </div>
             </div>
         </div>
-        <div name="thursday__container" class="speakers__container">
+        <div name="thursday__container" aria-hidden="true" class="speakers__container">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -265,7 +266,7 @@
                 </div>
             </div>
         </div>
-        <div name="friday__container" class="speakers__container speakers__container-active">
+        <div name="friday__container" aria-hidden="true" class="speakers__container speakers__container-active">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -313,19 +314,20 @@
             </div>
         </div>
     </section>
-    <section class="instructors" style="display: none">
+    <section class="instructors"  style="display: none">
         <div class="instructors__title">
             <h2>Instrutores confirmados</h2>
         </div>
-        <div class="instructors__tabs">
-            <button id="frontend__button" name="frontend" class="instructors__tabs__tab instructors__tabs__tab--active" onclick="changeTabArea(0)">
+        <div class="instructors__tabs" role="tabpanel">
+            <button id="frontend__button" role="tab" aria-selected="true" name="frontend" class="instructors__tabs__tab instructors__tabs__tab--active"
+                onclick="changeTabArea(0)">
                 Frontend
             </button>
-            <button id="backend__button" name="backend" class="instructors__tabs__tab" onclick="changeTabArea(1)">
+            <button id="backend__button" role="tab" aria-selected="false" name="backend" class="instructors__tabs__tab" onclick="changeTabArea(1)">
                 Backend
             </button>
         </div>
-        <div name="frontend__container" class="instructors__container instructors__container--active">
+        <div name="frontend__container" aria-hidden="false" class="instructors__container instructors__container--active">
             <div class="instructors__container__instructor">
                 <div class="instructors__container__instructor__avatar">
                     <img src="./images/avatar.svg">
@@ -371,7 +373,7 @@
                 </div>
             </div>
         </div>
-        <div name="backend__container" class="instructors__container">
+        <div name="backend__container" aria-hidden="true" class="instructors__container">
             <div class="instructors__container__instructor">
                 <div class="instructors__container__instructor__avatar">
                     <img src="./images/avatar.svg">
@@ -422,11 +424,9 @@
         <div class="call__title">
             <h2>Submeta sua palestra</h2>
         </div>
-        <div id="call__button" class="call__button">
-            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfutUCiQVo7XMR9lfe4ZJ_g6HX7gL3UQWwj1EJyGwkLkQbVBA/viewform">
-                Aqui
-            </a>
-        </div>
+        <a id="call__button" class="call__button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfutUCiQVo7XMR9lfe4ZJ_g6HX7gL3UQWwj1EJyGwkLkQbVBA/viewform">
+            Aqui
+        </a>
     </section>
     <section class="previous">
         <div class="previous__title">
@@ -434,7 +434,7 @@
                 O que rolou em 2017
             </h2>
         </div>
-        <div id="gallery" class="previous__gallery">
+        <figure id="gallery" class="previous__gallery">
             <div id="intro" class="previous__gallery__intro previous__gallery__intro--show">
                 <h2 class="previous__gallery__intro__title previous__gallery__intro__title--show">Realize o swipe para a esquerda</h2>
                 <img class="previous__gallery__intro__img previous__gallery__intro__img--show" src="./images/dblArrow.svg">
@@ -461,7 +461,7 @@
             <img id="img20" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img20.jpeg" alt="">
             <img id="img21" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img21.jpeg" alt="">
             <img id="img22" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img22.jpeg" alt="">
-        </div>
+        </figure>
     </section>
     <section class="sponsors">
         <div class="sponsors__title">
