@@ -471,6 +471,7 @@ body {
       .sponsors__content {
         width: 100%;
         grid-template-columns: 20% 20% 20% 20%;
+        grid-gap: 10px;
         margin-top: 2em;
         justify-content: center; } }
     .sponsors__content__img {
@@ -482,7 +483,7 @@ body {
         .sponsors__content__img {
           width: 100%; }
           .sponsors__content__img:hover {
-            transform: scale(2);
+            transform: scale(1.4);
             z-index: 1; } }
   @media (min-width: 768px) {
     .sponsors {
