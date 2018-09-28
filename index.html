@@ -19,7 +19,7 @@
 <body onload="start()">
     <header class="header">
         <div class="header__title">
-            <img src="./images/header.png">
+            <img id="header_img" role="banner" class="header__title__img" src="./images/header.png">
         </div>
     </header>
     <section class="introduction">
@@ -47,37 +47,38 @@
             </p>
         </div>
     </section>
-    <section class="speakers">
+    <section class="speakers" style="display: none">
         <div class="speakers__title">
             <h2>
                 Palestrantes confirmados
             </h2>
         </div>
-        <div class="speakers__tabs">
-            <div class="container">
-                <button id="monday__button" name="monday" class="speakers__tabs__tab speakers__tabs__tab--active" onclick="changeTab(0)">
+        <div class="speakers__tabs" role="tabpanel">
+            <div class="container" role="tablist">
+                <button id="monday__button" role="tab" aria-selected="true" name="monday" class="speakers__tabs__tab speakers__tabs__tab--active"
+                    onclick="changeTab(0)">
                     Segunda
                 </button>
-                <button id="tuesday__button" name="tuesday" class="speakers__tabs__tab" onclick="changeTab(1)">
+                <button id="tuesday__button" role="tab" aria-selected="false" name="tuesday" class="speakers__tabs__tab" onclick="changeTab(1)">
                     Terça
                 </button>
-                <button id="wednesday__button" name="wednesday" class="speakers__tabs__tab" onclick="changeTab(2)">
+                <button id="wednesday__button" role="tab" aria-selected="false" name="wednesday" class="speakers__tabs__tab" onclick="changeTab(2)">
                     Quarta
                 </button>
             </div>
-            <div class="container">
-                <button id="thursday__button" name="thursday" class="speakers__tabs__tab" onclick="changeTab(3)">
+            <div class="container" role="tablist">
+                <button id="thursday__button" role="tab" aria-selected="false" name="thursday" class="speakers__tabs__tab" onclick="changeTab(3)">
                     Quinta
                 </button>
 
-                <button id="friday__button" name="friday" class="speakers__tabs__tab" onclick="changeTab(4)">
+                <button id="friday__button" role="tab" aria-selected="false" name="friday" class="speakers__tabs__tab" onclick="changeTab(4)">
                     Sexta
                 </button>
 
             </div>
 
         </div>
-        <div name="monday__container" class="speakers__container speakers__container--active">
+        <div name="monday__container" aria-hidden="false" class="speakers__container speakers__container--active">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -124,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div name="tuesday__container" class="speakers__container ">
+        <div name="tuesday__container" aria-hidden="true" class="speakers__container ">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -171,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div name="wednesday__container" class="speakers__container">
+        <div name="wednesday__container" aria-hidden="true" class="speakers__container">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -218,7 +219,7 @@
                 </div>
             </div>
         </div>
-        <div name="thursday__container" class="speakers__container">
+        <div name="thursday__container" aria-hidden="true" class="speakers__container">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -265,7 +266,7 @@
                 </div>
             </div>
         </div>
-        <div name="friday__container" class="speakers__container speakers__container-active">
+        <div name="friday__container" aria-hidden="true" class="speakers__container speakers__container-active">
             <div class="speakers__container__speaker">
                 <div class="speakers__container__speaker__avatar">
                     <img src="./images/avatar.svg">
@@ -313,19 +314,20 @@
             </div>
         </div>
     </section>
-    <section class="instructors">
+    <section class="instructors"  style="display: none">
         <div class="instructors__title">
             <h2>Instrutores confirmados</h2>
         </div>
-        <div class="instructors__tabs">
-            <button id="frontend__button" name="frontend" class="instructors__tabs__tab instructors__tabs__tab--active" onclick="changeTabArea(0)">
+        <div class="instructors__tabs" role="tabpanel">
+            <button id="frontend__button" role="tab" aria-selected="true" name="frontend" class="instructors__tabs__tab instructors__tabs__tab--active"
+                onclick="changeTabArea(0)">
                 Frontend
             </button>
-            <button id="backend__button" name="backend" class="instructors__tabs__tab" onclick="changeTabArea(1)">
+            <button id="backend__button" role="tab" aria-selected="false" name="backend" class="instructors__tabs__tab" onclick="changeTabArea(1)">
                 Backend
             </button>
         </div>
-        <div name="frontend__container" class="instructors__container instructors__container--active">
+        <div name="frontend__container" aria-hidden="false" class="instructors__container instructors__container--active">
             <div class="instructors__container__instructor">
                 <div class="instructors__container__instructor__avatar">
                     <img src="./images/avatar.svg">
@@ -371,7 +373,7 @@
                 </div>
             </div>
         </div>
-        <div name="backend__container" class="instructors__container">
+        <div name="backend__container" aria-hidden="true" class="instructors__container">
             <div class="instructors__container__instructor">
                 <div class="instructors__container__instructor__avatar">
                     <img src="./images/avatar.svg">
@@ -422,11 +424,9 @@
         <div class="call__title">
             <h2>Submeta sua palestra</h2>
         </div>
-        <button id="call__button" class="call__button">
-            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfutUCiQVo7XMR9lfe4ZJ_g6HX7gL3UQWwj1EJyGwkLkQbVBA/viewform">
-                Aqui
-            </a>
-        </button>
+        <a id="call__button" class="call__button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfutUCiQVo7XMR9lfe4ZJ_g6HX7gL3UQWwj1EJyGwkLkQbVBA/viewform">
+            Aqui
+        </a>
     </section>
     <section class="previous">
         <div class="previous__title">
@@ -434,34 +434,34 @@
                 O que rolou em 2017
             </h2>
         </div>
-        <div id="gallery" class="previous__gallery">
+        <figure id="gallery" class="previous__gallery">
             <div id="intro" class="previous__gallery__intro previous__gallery__intro--show">
                 <h2 class="previous__gallery__intro__title previous__gallery__intro__title--show">Realize o swipe para a esquerda</h2>
                 <img class="previous__gallery__intro__img previous__gallery__intro__img--show" src="./images/dblArrow.svg">
             </div>
-            <img id="img1" class="previous__gallery__image" src="./images/previous/img1.jpg" alt="">
-            <img id="img2" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img2.jpg" alt="">
-            <img id="img3" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img3.jpg" alt="">
-            <img id="img4" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img4.jpg" alt="">
-            <img id="img5" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img5.jpg" alt="">
-            <img id="img6" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img6.jpg" alt="">
-            <img id="img7" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img7.jpg" alt="">
-            <img id="img8" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img8.jpg" alt="">
-            <img id="img9" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img9.jpg" alt="">
-            <img id="img10" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img10.jpg" alt="">
-            <img id="img11" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img11.jpg" alt="">
-            <img id="img12" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img12.jpg" alt="">
-            <img id="img13" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img13.jpg" alt="">
-            <img id="img14" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img14.jpg" alt="">
-            <img id="img15" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img15.jpg" alt="">
-            <img id="img16" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img16.jpg" alt="">
-            <img id="img17" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img17.jpg" alt="">
-            <img id="img18" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img18.jpg" alt="">
-            <img id="img19" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img19.jpg" alt="">
-            <img id="img20" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img20.jpg" alt="">
-            <img id="img21" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img21.jpg" alt="">
-            <img id="img22" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img22.jpg" alt="">
-        </div>
+            <img id="img1" class="previous__gallery__image" src="./images/previous/img1.jpeg" alt="">
+            <img id="img2" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img2.jpeg" alt="">
+            <img id="img3" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img3.jpeg" alt="">
+            <img id="img4" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img4.jpeg" alt="">
+            <img id="img5" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img5.jpeg" alt="">
+            <img id="img6" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img6.jpeg" alt="">
+            <img id="img7" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img7.jpeg" alt="">
+            <img id="img8" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img8.jpeg" alt="">
+            <img id="img9" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img9.jpeg" alt="">
+            <img id="img10" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img10.jpeg" alt="">
+            <img id="img11" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img11.jpeg" alt="">
+            <img id="img12" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img12.jpeg" alt="">
+            <img id="img13" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img13.jpeg" alt="">
+            <img id="img14" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img14.jpeg" alt="">
+            <img id="img15" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img15.jpeg" alt="">
+            <img id="img16" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img16.jpeg" alt="">
+            <img id="img17" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img17.jpeg" alt="">
+            <img id="img18" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img18.jpeg" alt="">
+            <img id="img19" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img19.jpeg" alt="">
+            <img id="img20" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img20.jpeg" alt="">
+            <img id="img21" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img21.jpeg" alt="">
+            <img id="img22" class="previous__gallery__image previous__gallery__image--right" src="./images/previous/img22.jpeg" alt="">
+        </figure>
     </section>
     <section class="sponsors">
         <div class="sponsors__title">
@@ -491,7 +491,7 @@
         <div id="organizer__container" class="organization__container">
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/airton.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/airton.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">
                         Airton Brasil
                         <img src="./images/arrow.svg" onclick="interactOrganizer(1)">
@@ -518,7 +518,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/alex.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/alex.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">
                         Alex Afonso
                         <img src="./images/arrow.svg" onclick="interactOrganizer(2)">
@@ -550,7 +550,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/allan.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/allan.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">
                         Allan Flores
                         <img src="./images/arrow.svg" onclick="interactOrganizer(3)">
@@ -579,7 +579,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/andre.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/andre.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">André Constancio
                         <img src="./images/arrow.svg" onclick="interactOrganizer(4)">
 
@@ -612,7 +612,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/angelino.jpg" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/angelino.jpeg" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Angelino Pires
                         <img src="./images/arrow.svg" onclick="interactOrganizer(5)">
 
@@ -641,7 +641,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/barbara.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/barbara.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Bárbara Sajo
                         <img src="./images/arrow.svg" onclick="interactOrganizer(6)">
                     </div>
@@ -670,7 +670,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/bia.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/bia.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">
                         Beatriz Delmont
                         <img src="./images/arrow.svg" onclick="interactOrganizer(7)">
@@ -701,7 +701,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/christian.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/christian.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Christian Corrales
                         <img src="./images/arrow.svg" onclick="interactOrganizer(8)">
 
@@ -732,7 +732,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/eduardo.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/eduardo.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Eduardo Son
                         <img src="./images/arrow.svg" onclick="interactOrganizer(9)">
 
@@ -761,7 +761,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/elet.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/elet.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">
                         Élet Silva
                         <img src="./images/arrow.svg" onclick="interactOrganizer(10)">
@@ -788,7 +788,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/felipe.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/felipe.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Felipe Bernardes
                         <img src="./images/arrow.svg" onclick="interactOrganizer(11)">
 
@@ -816,7 +816,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/guiR.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/guiR.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Guilherme Romão
                         <img src="./images/arrow.svg" onclick="interactOrganizer(12)">
                     </div>
@@ -832,13 +832,13 @@
                         </p>
                     </div>
                     <div class="organization__container__collapse__links">
-                        <a target="_blank" href="https://github.com/romaodv">
+                        <a target="_blank" href="https://www.github.com/romaodv">
                             <img class="organization__container__collapse__links__img" src="./images/github.svg">
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/guilherme-rom%C3%A3o-220222149/">
                             <img class="organization__container__collapse__links__img" src="./images/linkedin.svg">
                         </a>
-                        <a target="_blank" href="https://facebook.com/guilhermeoromao">
+                        <a target="_blank" href="https://www.facebook.com/guilhermeoromao">
                             <img class="organization__container__collapse__links__img" src="./images/facebook.svg">
                         </a>
                     </div>
@@ -847,7 +847,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/guiS.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/guiS.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Guilherme Sernajoto
                         <img src="./images/arrow.svg" onclick="interactOrganizer(13)">
                     </div>
@@ -876,7 +876,7 @@
             </div>
             <div class="container">
                 <div class="organization__container__organizer">
-                    <img src="./images/organizers/lindsay.jpg" alt="" class="organization__container__organizer__avatar">
+                    <img src="./images/organizers/lindsay.jpeg" alt="" class="organization__container__organizer__avatar">
                     <div class="organization__container__organizer__text">Lindsay Ferreira
                         <img src="./images/arrow.svg" onclick="interactOrganizer(14)">
                     </div>
@@ -905,9 +905,9 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="footer__logo">
+        <a class="footer__logo" href="http://www.fatecsorocaba.edu.br/" target="_blank">
             <img src="./images/logoFatec.png" alt="">
-        </div>
+        </a>
         <div class="footer__email">
             <a>semanadetecnologiafatecso@gmail.com</a>
         </div>
