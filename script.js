@@ -123,16 +123,9 @@ function changeTab(tab) {
 function changeTabArea(tab) {
   var areas = ["frontend", "backend"];
   var containers = document.getElementsByClassName(instContainer);
-  var containerAtual = document.getElementsByClassName(
-    instContainer + instContainer + active
-  );
-
-  containerAtual.namedItem(
-    tabAreaAtual + "__container"
-  ).className = instContainer;
-  containerAtual
-    .namedItem(tabAreaAtual + "__container")
-    .setAttribute("aria-hidden", "true");
+  var containerAtual = document.querySelectorAll(".instructors__container--active")
+  console.log(containerAtual);
+  containerAtual.item(0).className = instContainer
   containers.namedItem(areas[tab] + "__container").className =
     instContainer + instContainer + active;
   containers

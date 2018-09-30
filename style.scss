@@ -41,6 +41,7 @@ body {
   align-items: center;
   line-height: 25px;
   overflow-x: hidden;
+  height: 100%;
 }
 .header {
   background-color: $primary-color;
@@ -413,6 +414,8 @@ body {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       justify-items: center;
+      overflow-y: hidden;
+      align-items: flex-start;
     }
 
     &--active {
@@ -468,6 +471,8 @@ body {
           padding-right: 0;
           font-size: medium;
           align-items: center;
+          text-align: center;
+          width: 90%
         }
 
         &__name {
@@ -484,7 +489,7 @@ body {
             padding-top: 20px;
             display: block;
             text-align: justify;
-            width: 80%;
+            width: 90%;
           }
         }
       }
