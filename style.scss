@@ -159,12 +159,11 @@ body {
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    transition: .2s ease-out;
+    transition: 0.2s ease-out;
     color: $primary-dark;
     &:link {
       text-decoration: none;
     }
-
 
     &:hover {
       transform: scale(1.1);
@@ -228,7 +227,7 @@ body {
       width: 80px;
       margin: 0 10px;
       cursor: pointer;
-      transition: .2s ease-out;
+      transition: 0.2s ease-out;
 
       &:hover {
         transform: scale(1.1);
@@ -258,6 +257,7 @@ body {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       justify-items: center;
+      align-items: flex-start;
     }
 
     &--active {
@@ -313,6 +313,8 @@ body {
           padding-right: 0;
           font-size: medium;
           align-items: center;
+          text-align: center;
+          width: 90%
         }
 
         &__name {
@@ -329,7 +331,7 @@ body {
             padding-top: 20px;
             display: block;
             text-align: justify;
-            width: 80%;
+            width: 90%
           }
         }
       }
@@ -382,7 +384,7 @@ body {
       z-index: 1;
       margin: 0 10px;
       cursor: pointer;
-      transition: .2s ease-out;
+      transition: 0.2s ease-out;
 
       &:hover {
         transform: scale(1.1);
@@ -676,7 +678,7 @@ body {
     width: 40vh;
     margin: auto;
     cursor: pointer;
-    transition: .2s ease-out;
+    transition: 0.2s ease-out;
 
     &:hover {
       transform: scale(1.1);
