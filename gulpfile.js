@@ -50,7 +50,7 @@ gulp.task("svg", () => {
         .pipe(gulp.dest("./build/images"));
 })
 gulp.task("sponsors", () => {
-    return gulp.src(["./images/sponsors/*.png"])
+    return gulp.src(["./images/sponsors/*.png", "./images/sponsors/**.jpg"])
         .pipe(gulp.dest("./build/images/sponsors"));
 })
 gulp.task("previous", () => {
